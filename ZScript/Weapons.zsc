@@ -1,0 +1,34 @@
+//// WEAPONS ////
+// Slot 1 //
+// Slot 2 //
+#include "./Weapons/2 - Glock.zsc"
+// Slot 3 //
+// Slot 4 //
+// Slot 5 //
+// Slot 6 //
+// Slot 7 //
+// Slot 8 //
+// Slot 9 //
+// Slot 0 //
+
+class GSW_Weapon : Weapon
+{
+	action bool JustPressed(int which) // "which" being any BT_* value, mentioned above or not
+	{
+		return player.cmd.buttons & which && !(player.oldbuttons & which);
+	}
+	Default
+	{
+		//$Category Weapons
+		+THRUGHOST // use -THRUGHOST to make it affect Heretic ghosts
+		+WEAPON.NOAUTOSWITCHTO
+		Weapon.Kickback 100;
+		//Weapon.UpSound "weapons/draw_default";
+		Obituary "$PLACEHOLDER";
+		Tag "Weapon base";
+		Weapon.BobStyle "Smooth";
+		Weapon.BobRangeX 1.0;
+		Weapon.BobRangeY 1.0;
+		Weapon.BobSpeed 1.0;
+	}
+}

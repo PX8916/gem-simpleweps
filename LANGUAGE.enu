@@ -1,0 +1,47 @@
+[enu default]
+PLACEHOLDER = "You shouldn't see this.";
+
+// ======================== //
+//  Weapon pickup messages  //
+// ======================== //
+// Slot 1 //
+// Slot 2 //
+GOTGLOCK = "\c[White]You picked up the \c[DarkGray]Glock 17\c[White]! (Slot 2, tap to fire faster.)";
+// Slot 3 //
+// Slot 4 //
+// Slot 5 //
+// Slot 6 //
+// Slot 7 //
+// Slot 8 //
+// Slot 9 //
+// Slot 0 //
+
+// ======================== //
+// Weapon obituary messages //
+// ======================== //
+// Slot 1 //
+// Slot 2 //
+KILLGLOCK = "%o was plinked by %k's \c[DarkGray]Glock\c[Untranslated].";
+// Slot 3 //
+// Slot 4 //
+// Slot 5 //
+// Slot 6 //
+// Slot 7 //
+// Slot 8 //
+// Slot 9 //
+// Slot 0 //
+
+// ======================== //
+//       Weapon names       //
+// ======================== //
+// Slot 1 //
+// Slot 2 //
+TAG_GLOCK = "Glock 17";
+// Slot 3 //
+// Slot 4 //
+// Slot 5 //
+// Slot 6 //
+// Slot 7 //
+// Slot 8 //
+// Slot 9 //
+// Slot 0 //

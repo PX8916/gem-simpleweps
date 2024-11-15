@@ -1,0 +1,4 @@
+// Glock //
+weapons/glock/fire		"Sounds/Weapons/2 - Glock/glock_single.wav"
+weapons/glock/empty		"Sounds/Weapons/2 - Glock/glock_empty.wav"
+weapons/glock/reload	"Sounds/Weapons/2 - Glock/glock_reload.wav"
