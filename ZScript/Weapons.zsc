@@ -3,6 +3,7 @@
 // Slot 2 //
 #include "./Weapons/2 - Glock.zsc"
 // Slot 3 //
+#include "./Weapons/3 - Pummeler.zsc"
 // Slot 4 //
 // Slot 5 //
 // Slot 6 //
@@ -21,7 +22,7 @@ class GSW_Weapon : Weapon
 	{
 		//$Category Weapons
 		+THRUGHOST // use -THRUGHOST to make it affect Heretic ghosts
-		+WEAPON.NOAUTOSWITCHTO
+		//+WEAPON.NOAUTOSWITCHTO
 		Weapon.Kickback 100;
 		//Weapon.UpSound "weapons/draw_default";
 		Obituary "$PLACEHOLDER";

@@ -1,4 +1,4 @@
-flickerlight2 GG_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.pk3
+flickerlight2 GSW_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.pk3
 {
     color 1.0 0.8 0.2
     size 72

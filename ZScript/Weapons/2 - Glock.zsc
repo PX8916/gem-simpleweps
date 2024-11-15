@@ -1,12 +1,19 @@
+// Glock
+// An infinite-ammo pistol that requires reloading.
+// Holds 17 shots in the mag, and one more in the chamber. Reflect this in the reload from empty!
 class GSW_Glock : GSW_Weapon replaces Pistol
 {
 	Default
 	{
 		Weapon.SlotNumber 2;
+
 		Tag "$TAG_GLOCK";
 		Obituary "$KILLGLOCK";
 		Inventory.PickupMessage "$GOTGLOCK";
+
 		AttackSound "weapons/glock/fire";
+		Weapon.UpSound "weapons/glock/draw";
+
 		Decal "BulletChip";
 	}
 	States
@@ -15,13 +22,13 @@ class GSW_Glock : GSW_Weapon replaces Pistol
 			GLOC Z -1;
 			Stop;
 		Select:
-			GLOC A 1 A_Raise;
+			GLOC A 1 A_Raise(18);
 			Loop;
 		Deselect:
-			GLOC A 1 A_Lower;
+			GLOC A 1 A_Lower(18);
 			Loop;
 		Ready:
-			GLOC A 1 A_WeaponReady;
+			GLOC A 1 A_WeaponReady(WRF_ALLOWRELOAD);
 			Loop;
 		Fire:
 			GLOC A 0 {
@@ -34,8 +41,11 @@ class GSW_Glock : GSW_Weapon replaces Pistol
 			// Go to "Empty" reload state if nothing's in the mag
 			GLOC AAAA 1 A_JumpIf(JustPressed(BT_ATTACK), "Fire");
 			Goto Ready;
+		Reload: // Nothin' here yet.
+		Reload.Empty: // Nothin' here yet either.
+			Goto Ready;
 		Flash:
-			GLOF A 1 Bright A_AttachLightDef("Flash", "GG_GunFlash");
+			GLOF A 1 Bright A_AttachLightDef("Flash", "GSW_GunFlash");
 			GLOF B 1 Bright;
 			GLOF B 0 A_RemoveLight("Flash");
 			Stop;

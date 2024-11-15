@@ -12,6 +12,18 @@
                 "${workspaceFolder}"
             ],
             "problemMatcher": []
+        },
+        {
+            "label": "GZDoom - Run Workspace Folder - Test map",
+            "type": "process",
+            "command": "gzdoom",
+            "args": [
+                "-file",
+                "${workspaceFolder}",
+                "+map",
+                "test"
+            ],
+            "problemMatcher": []
         }
     ]
 }

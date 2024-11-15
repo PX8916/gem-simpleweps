@@ -6,8 +6,9 @@ PLACEHOLDER = "You shouldn't see this.";
 // ======================== //
 // Slot 1 //
 // Slot 2 //
-GOTGLOCK = "\c[White]You picked up the \c[DarkGray]Glock 17\c[White]! (Slot 2, tap to fire faster.)";
+GOTGLOCK = "\c[White]You picked up the \c[Black]Glock 17\c[White]! (Slot 2, tap to fire faster)";
 // Slot 3 //
+GOTPUMMELER = "\c[White]You picked up the \c[DarkGray]\"Pummeler\" Pump Shotgun\c[White]! (Slot 3)";
 // Slot 4 //
 // Slot 5 //
 // Slot 6 //
@@ -21,8 +22,9 @@ GOTGLOCK = "\c[White]You picked up the \c[DarkGray]Glock 17\c[White]! (Slot 2, t
 // ======================== //
 // Slot 1 //
 // Slot 2 //
-KILLGLOCK = "%o was plinked by %k's \c[DarkGray]Glock\c[Untranslated].";
+KILLGLOCK = "%o was plinked by %k's \c[Black]Glock\c[Untranslated].";
 // Slot 3 //
+KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Untranslated].";
 // Slot 4 //
 // Slot 5 //
 // Slot 6 //
@@ -38,6 +40,7 @@ KILLGLOCK = "%o was plinked by %k's \c[DarkGray]Glock\c[Untranslated].";
 // Slot 2 //
 TAG_GLOCK = "Glock 17";
 // Slot 3 //
+TAG_PUMMELER = "\"Pummeler\" Shotgun";
 // Slot 4 //
 // Slot 5 //
 // Slot 6 //
