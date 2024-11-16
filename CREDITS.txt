@@ -1,8 +1,8 @@
 # Sprites
 * Glock 17 - cybermonday
-* "Pummeler" Shotgun - AGamma, Captain J, "The Jury Rig" by Sparkwire, Svdl, Heartsman
+* "Pummeler" Shotgun - crozi4032 ("Chunky Shooshgun"), Monolith Interactive (Blood), Lobotomy Software (PowerSlave/Exhumed), dzierdan, fgsfds, SoniK.O.Fan/Tesefy, Brutal Doom
 # Sounds
-* Glock 17 - Crowbar Collective (Black Mesa) & Valve (Counter-Strike: Global Offensive)
-* "Pummeler" Shotgun - ??? (fire sound) & Crowbar Collective (Black Mesa) (pump sounds)
+* Glock 17 - Crowbar Collective (Black Mesa) & Valve Software (Counter-Strike: Global Offensive)
+* "Pummeler" Shotgun - ??? (fire), Crowbar Collective (Black Mesa) (pump), Tripwire Interactive (Killing Floor) (draw, pickup, load)
 # Other
 * Matt Eldrydge - The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)

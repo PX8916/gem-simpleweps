@@ -2,3 +2,16 @@
 weapons/pummeler/fire		"Sounds/Weapons/3 - Pummeler/fire.wav"
 weapons/pummeler/pumpin		"Sounds/Weapons/3 - Pummeler/pumpin.wav"
 weapons/pummeler/pumpout	"Sounds/Weapons/3 - Pummeler/pumpout.wav"
+weapons/pummeler/draw		"Sounds/Weapons/3 - Pummeler/draw.wav"
+weapons/pummeler/pickup		"Sounds/Weapons/3 - Pummeler/pickup.wav"
+
+weapons/pummeler/load1		"Sounds/Weapons/3 - Pummeler/load1.wav"
+weapons/pummeler/load2		"Sounds/Weapons/3 - Pummeler/load2.wav"
+weapons/pummeler/load3		"Sounds/Weapons/3 - Pummeler/load3.wav"
+weapons/pummeler/load4		"Sounds/Weapons/3 - Pummeler/load4.wav"
+weapons/pummeler/load5		"Sounds/Weapons/3 - Pummeler/load5.wav"
+weapons/pummeler/load6		"Sounds/Weapons/3 - Pummeler/load6.wav"
+weapons/pummeler/load7		"Sounds/Weapons/3 - Pummeler/load7.wav"
+weapons/pummeler/load8		"Sounds/Weapons/3 - Pummeler/load8.wav"
+
+$random weapons/pummeler/load { weapons/pummeler/load1 weapons/pummeler/load2 weapons/pummeler/load3 weapons/pummeler/load4 weapons/pummeler/load5 weapons/pummeler/load6 weapons/pummeler/load7 weapons/pummeler/load8 }

@@ -85,6 +85,7 @@ class GSW_Glock : GSW_Weapon replaces Pistol
 		Reload: // Reload, with the full 18.
 		// Not bothering to check for any ammo type, but do check if you're already full.
 			TNT1 A 0 A_JumpIfInventory("GSW_GlockAmmo", 0, "Ready"); // Aughhh. I would totally make an "inspect" animation, but that'd cost more frames.
+			TNT1 A 0 A_JumpIfNoAmmo("ReloadEmpty");
 			GLOC RQST 2;
 			GLOC U 6 A_StartSound("weapons/glock/clipout");
 			GLOC V 10;
