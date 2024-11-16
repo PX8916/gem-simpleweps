@@ -1,0 +1,40 @@
+class GSW_Fist : GSW_Weapon replaces Fist
+{
+	Default
+	{
+		//Weapon.SelectionOrder 3700;
+		Weapon.SlotNumber 1;
+		Obituary "$OB_MPFIST";
+		Tag "$TAG_FIST";
+		+WEAPON.WIMPY_WEAPON
+		+WEAPON.MELEEWEAPON
+		+WEAPON.NOAUTOSWITCHTO
+	}
+	States
+	{
+		Ready:
+			PUNG A 1 A_WeaponReady;
+			Loop;
+		Deselect:
+			PUNG A 1 A_Lower(18);
+			Loop;
+		Select:
+			PUNG A 1 A_Raise(18);
+			Loop;
+		Fire:
+			PUNG B 4;
+			PUNG C 4
+			{
+				int dmg = 10;
+				if (FindInventory("PowerStrength"))
+				{
+					dmg *= 10;
+				}
+				A_CustomPunch(dmg, norandom:true, range: meleeRange + 20, meleesound: "*fist");
+			}
+			PUNG D 5;
+			PUNG C 4;
+			PUNG B 5 A_ReFire;
+			Goto Ready;
+	}
+}

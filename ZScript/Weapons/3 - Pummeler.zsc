@@ -53,7 +53,7 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 			Loop;
 		Fire:
 			PUMG A 2 {
-				A_FireBullets(4, 4, 10, 15, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ); // Do stuff with missile params when you add tracers
+				A_FireBullets(4, 4, 10, 15, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5); // Do stuff with missile params when you add tracers
 				A_GunFlash();
 			}
 			PUMG BCCAAAA 2; // Recoil

@@ -6,3 +6,4 @@
 * "Pummeler" Shotgun - ??? (fire), Crowbar Collective (Black Mesa) (pump), Tripwire Interactive (Killing Floor) (draw, pickup, load)
 # Other
 * Matt Eldrydge - The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)
+* Denis Belmondo - ZScript particle-based tracers

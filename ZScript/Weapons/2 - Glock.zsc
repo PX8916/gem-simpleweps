@@ -51,7 +51,7 @@ class GSW_Glock : GSW_Weapon replaces Pistol
 			GLOC A 0 A_JumpIfNoAmmo("Fire.Empty");
 			GLOC A 0 {
 				// heeere we gooooooo hitscan stuff and yeah
-				A_FireBullets(2, 2, -1, 12, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ); // -1 bullets to always fire with spread, and do stuff with missile params when you add tracers
+				A_FireBullets(2, 2, -1, 12, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5); // -1 bullets to always fire with spread
 				A_GunFlash();
 			}
 			GLOC BC 2;

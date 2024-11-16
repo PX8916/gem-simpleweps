@@ -1,5 +1,6 @@
 //// WEAPONS ////
 // Slot 1 //
+#include "./Weapons/Placeholder - Fist.zsc"
 // Slot 2 //
 #include "./Weapons/2 - Glock.zsc"
 // Slot 3 //
@@ -31,5 +32,20 @@ class GSW_Weapon : Weapon
 		Weapon.BobRangeX 1.0;
 		Weapon.BobRangeY 1.0;
 		Weapon.BobSpeed 1.0;
+	}
+}
+
+class GSW_BulletTracer : _ZTracer
+{
+	Default
+	{
+		Decal "BulletChip";
+		Speed 60;
+		DamageFunction 0;
+	}
+	States
+	{
+		Death:
+			Stop;
 	}
 }

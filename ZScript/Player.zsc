@@ -5,6 +5,7 @@ class GSW_Player : DoomPlayer
 		Player.StartItem "GSW_Glock";
 		Player.StartItem "GSW_GlockAmmo", 18;
 		Player.StartItem "GSW_PummelerAmmo", 9;
+		Player.StartItem "GSW_Fist";
 		Player.AttackZOffset 11;
 	}
 }
