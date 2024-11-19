@@ -1,0 +1,30 @@
+class GSW_SecurityArmor : GreenArmor replaces GreenArmor
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSECURITYARMOR";
+		Inventory.Icon "IARME0";
+	}
+	States
+	{
+		Spawn:
+			IARM E 6;
+			IARM F 7 Bright;
+			Loop;
+	}
+}
+class GSW_CombatArmor : BlueArmor replaces BlueArmor
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTCOMBATARMOR";
+		Inventory.Icon "IARMG0";
+	}
+	States
+	{
+		Spawn:
+			IARM G 6;
+			IARM H 7 Bright;
+			Loop;
+	}
+}

@@ -1,0 +1,3 @@
+GSW_Buckshot	=	"80:99=[255,123,123]:[67,0,0]" // Plastic (Red)
+GSW_Slug		=	"80:99=[123,255,123]:[0,67,0]" // Plastic (Green)
+GSW_Poison		=	"80:99=[175,38,191]:[0,20,67]" // Plastic (Purple)

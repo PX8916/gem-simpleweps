@@ -5,11 +5,13 @@ PLACEHOLDER = "You shouldn't see this.";
 //  Weapon pickup messages  //
 // ======================== //
 // Slot 1 //
+// No Knife pickup message, since you start with it.
 // Slot 2 //
 GOTGLOCK = "\c[White]You picked up the \c[Black]Glock 17\c[White]! (Slot 2, tap to fire faster)";
 // Slot 3 //
 GOTPUMMELER = "\c[White]You picked up the \c[DarkGray]\"Pummeler\" Pump Shotgun\c[White]! (Slot 3)";
 // Slot 4 //
+GOTBUZZKILLER = "\c[White]You picked up the \c[Gray]\"Buzzkiller\" Machine Gun\c[White]! (Slot 4)";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -21,11 +23,13 @@ GOTPUMMELER = "\c[White]You picked up the \c[DarkGray]\"Pummeler\" Pump Shotgun\
 // Weapon obituary messages //
 // ======================== //
 // Slot 1 //
+KILLKNIFE = "%o was given the ol' swish-swish-stab by %k's \c[Brown]Knife\c[Untranslated].";
 // Slot 2 //
 KILLGLOCK = "%o was plinked by %k's \c[Black]Glock\c[Untranslated].";
 // Slot 3 //
 KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Untranslated].";
 // Slot 4 //
+KILLBUZZKILLER = "%o had their buzz killed by %k's \c[DarkGray]Buzzkiller\c[Untranslated].";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -37,14 +41,42 @@ KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Untranslated].";
 //       Weapon names       //
 // ======================== //
 // Slot 1 //
+TAG_KNIFE = "Knife";
 // Slot 2 //
 TAG_GLOCK = "Glock 17";
 // Slot 3 //
 TAG_PUMMELER = "\"Pummeler\" Shotgun";
 // Slot 4 //
+TAG_BUZZKILLER = "\"Buzzkiller\" Machine Gun";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
 // Slot 0 //
+
+// ======================== //
+//   Ammo pickup messages   //
+// ======================== //
+GOTBULLETMAG = "\c[White]Picked up a \c[Gold]magazine of bullets\c[White].";
+GOTBULLETBOX = "\c[White]Picked up a \c[Gold]box of bullets\c[White].";
+GOTSHELLBOXSMALL = "\c[White]Picked up a \c[Red]small box of shotgun shells\c[White].";
+GOTSHELLBOXLARGE = "\c[White]Picked up a \c[Red]large box of shotgun shells\c[White].";
+
+// ======================== //
+//   Item pickup messages   //
+// ======================== //
+// Health //
+GOTHEALTHBONUS = "\c[White]Picked up a \c[Blue]health bonus\c[White]. (+1 health)";
+GOTHEALTHBONUSNEED = "\c[White]Picked up a \c[Blue]health bonus\c[White]. Gonna need more. (+1 health)";
+GOTSTIMPACK = "\c[White]Picked up a \c[Red]stimpack\c[White]. (+10 health)";
+GOTSTIMPACKNEED = "\c[White]Picked up a \c[Red]stimpack\c[White]. Feeling a bit better. (+10 health)";
+GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
+GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
+// Armor //
+GOTSECURITYARMOR = "\c[White]Picked up the \c[Green]Security Armor\c[White]. (100 armor, 33% protection)";
+GOTCOMBATARMOR = "\c[White]Picked up the \c[Blue]Combat Armor\c[White]. (200 armor, 50% protection)";
+
+
+// Powerups //
+GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)";

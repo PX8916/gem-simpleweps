@@ -1,7 +1,8 @@
 version "4.1.0"
 
-#include "ZScript/Libraries/ZTracers.zsc"	// ZTracers by Denis Belmondo
+#include "ZScript/Libraries.zsc"			// Library includes
 
 #include "ZScript/Player.zsc"				// Player class
 
 #include "ZScript/Weapons.zsc"				// Weapon includes
+#include "ZScript/Items.zsc"				// Item includes

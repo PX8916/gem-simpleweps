@@ -1,9 +1,19 @@
 # Sprites
+## Weapons
 * Glock 17 - cybermonday
 * "Pummeler" Shotgun - crozi4032 ("Chunky Shooshgun"), Monolith Interactive (Blood), Lobotomy Software (PowerSlave/Exhumed), dzierdan, fgsfds, SoniK.O.Fan/Tesefy, Brutal Doom
+* Machine Gun - Captain J
+* Knife - TiberiumSoul (RIP), Farhan, MartyKirra, Mace, Potetobloke
+## Items
+* Bullet and shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack - Zrrion the Insect
+
 # Sounds
+## Weapons
 * Glock 17 - Crowbar Collective (Black Mesa) & Valve Software (Counter-Strike: Global Offensive)
-* "Pummeler" Shotgun - ??? (fire), Crowbar Collective (Black Mesa) (pump), Tripwire Interactive (Killing Floor) (draw, pickup, load)
+* "Pummeler" Shotgun - Treyarch (Call of Duty: World at War) (fire), Crowbar Collective (Black Mesa) (pump), Tripwire Interactive (Killing Floor) (draw, pickup, load)
+* Machine Gun - Treyarch (Call of Duty: Black Ops)
+* Knife - None yet
+
 # Other
 * Matt Eldrydge - The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)
 * Denis Belmondo - ZScript particle-based tracers

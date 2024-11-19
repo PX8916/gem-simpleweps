@@ -1,0 +1,12 @@
+// "Buzzkiller" Machine Gun //
+weapons/buzzkiller/fire1	"Sounds/Weapons/4 - Buzzkiller/fire1.wav"
+weapons/buzzkiller/fire2	"Sounds/Weapons/4 - Buzzkiller/fire2.wav"
+weapons/buzzkiller/fire3	"Sounds/Weapons/4 - Buzzkiller/fire3.wav"
+weapons/buzzkiller/fire4	"Sounds/Weapons/4 - Buzzkiller/fire4.wav"
+weapons/buzzkiller/fire5	"Sounds/Weapons/4 - Buzzkiller/fire5.wav"
+
+weapons/buzzkiller/draw		"Sounds/Weapons/4 - Buzzkiller/draw.wav"
+weapons/buzzkiller/empty	"Sounds/Weapons/4 - Buzzkiller/empty.wav"
+weapons/buzzkiller/pickup	"Sounds/Weapons/4 - Buzzkiller/pickup.wav"
+
+$random weapons/buzzkiller/fire { weapons/buzzkiller/fire1 weapons/buzzkiller/fire2 weapons/buzzkiller/fire3 weapons/buzzkiller/fire4 weapons/buzzkiller/fire5 }

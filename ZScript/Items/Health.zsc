@@ -1,0 +1,31 @@
+class GSW_Stimpack : Health replaces Stimpack
+{
+	Default
+	{
+		Inventory.Amount 10;
+		Inventory.PickupMessage "$GOTSTIMPACK";
+		Health.LowMessage 25, "$GOTSTIMPACKNEED";
+	}
+	States
+	{
+		Spawn:
+			IHEL F -1;
+			Stop;
+	}
+}
+class GSW_Medkit : Health replaces Medikit
+{
+	Default
+	{
+		Inventory.Icon "IHELG0";
+		Inventory.Amount 25;
+		Inventory.PickupMessage "$GOTMEDKIT";
+		Health.LowMessage 25, "$GOTMEDKITNEED";
+	}
+	States
+	{
+		Spawn:
+			IHEL G -1;
+			Stop;
+	}
+}

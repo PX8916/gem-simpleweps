@@ -4,6 +4,8 @@ weapons/pummeler/pumpin		"Sounds/Weapons/3 - Pummeler/pumpin.wav"
 weapons/pummeler/pumpout	"Sounds/Weapons/3 - Pummeler/pumpout.wav"
 weapons/pummeler/draw		"Sounds/Weapons/3 - Pummeler/draw.wav"
 weapons/pummeler/pickup		"Sounds/Weapons/3 - Pummeler/pickup.wav"
+weapons/pummeler/empty		"Sounds/Weapons/3 - Pummeler/empty.wav"
+weapons/pummeler/debug		"Sounds/Weapons/3 - Pummeler/fish.wav"
 
 weapons/pummeler/load1		"Sounds/Weapons/3 - Pummeler/load1.wav"
 weapons/pummeler/load2		"Sounds/Weapons/3 - Pummeler/load2.wav"

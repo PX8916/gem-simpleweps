@@ -26,7 +26,7 @@ class GSW_Fist : GSW_Weapon replaces Fist
 			PUNG C 4
 			{
 				int dmg = 10;
-				if (FindInventory("PowerStrength"))
+				if (FindInventory("GSW_PowerStrength"))
 				{
 					dmg *= 10;
 				}

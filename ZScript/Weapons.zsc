@@ -1,11 +1,13 @@
 //// WEAPONS ////
 // Slot 1 //
 #include "./Weapons/Placeholder - Fist.zsc"
+#include "./Weapons/1 - Knife.zsc"
 // Slot 2 //
 #include "./Weapons/2 - Glock.zsc"
 // Slot 3 //
 #include "./Weapons/3 - Pummeler.zsc"
 // Slot 4 //
+#include "./Weapons/4 - Buzzkiller.zsc"
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -18,6 +20,21 @@ class GSW_Weapon : Weapon
 	action bool JustPressed(int which) // "which" being any BT_* value, mentioned above or not
 	{
 		return player.cmd.buttons & which && !(player.oldbuttons & which);
+	}
+	action bool IsPressed(int which) // "which" being any BT_* value, mentioned above or not
+	{
+		return player.cmd.buttons & which;
+	}
+	// Credit Mikk0451
+	// Cheers, Brutal Doom Platinum!!
+	// Changes ammo icon only
+	action void ChangeAmmoIcon1(String AmmoIcon)
+	{
+		(findInventory(invoker.ammo1.GetClassName())).icon = texman.CheckForTexture(AmmoIcon, TexMan.Type_Any);
+	}
+	action void ChangeAmmoIcon2(String AmmoIcon)
+	{
+		(findInventory(invoker.ammo2.GetClassName())).icon = texman.CheckForTexture(AmmoIcon, TexMan.Type_Any);
 	}
 	Default
 	{
