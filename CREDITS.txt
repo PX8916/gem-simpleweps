@@ -1,19 +1,59 @@
 # Sprites
 ## Weapons
-* Glock 17 - cybermonday
-* "Pummeler" Shotgun - crozi4032 ("Chunky Shooshgun"), Monolith Interactive (Blood), Lobotomy Software (PowerSlave/Exhumed), dzierdan, fgsfds, SoniK.O.Fan/Tesefy, Brutal Doom
-* Machine Gun - Captain J
-* Knife - TiberiumSoul (RIP), Farhan, MartyKirra, Mace, Potetobloke
+### Glock 17
+cybermonday
+### "Pummeler" Shotgun
+crozi4032 ("Chunky Shooshgun")
+Monolith Interactive (Blood)
+Lobotomy Software (PowerSlave/Exhumed)
+dzierdan
+fgsfds
+SoniK.O.Fan/Tesefy (Brutal Doom)
+### "Buzzkiller" Machine Gun
+Captain J
+### Knife
+TiberiumSoul (RIP)
+Farhan
+MartyKirra
+Mace
+Potetobloke
+
 ## Items
-* Bullet and shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack - Zrrion the Insect
+### Bullet and shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack
+Zrrion the Insect
+
+
 
 # Sounds
 ## Weapons
-* Glock 17 - Crowbar Collective (Black Mesa) & Valve Software (Counter-Strike: Global Offensive)
-* "Pummeler" Shotgun - Treyarch (Call of Duty: World at War) (fire), Crowbar Collective (Black Mesa) (pump), Tripwire Interactive (Killing Floor) (draw, pickup, load)
-* Machine Gun - Treyarch (Call of Duty: Black Ops)
-* Knife - None yet
+### Glock 17
+Crowbar Collective (Black Mesa)
+Valve Software (Counter-Strike: Global Offensive)
+### "Pummeler" Shotgun
+Treyarch (Call of Duty: World at War) (fire)
+Crowbar Collective (Black Mesa) (pump)
+Tripwire Interactive (Killing Floor) (draw, pickup, load)
+### "Buzzkiller" Machine Gun
+Treyarch (Call of Duty: Black Ops)
+### Knife
+None yet
+
+## Other
+### Debug sound ("Oh, fiddlesticks! What now?" - Dr. Kleiner)
+Valve (Half-Life 2)
+
+
+
+# Code
+### ZTracers
+Denis Belmondo
+### Ammo icon swap
+Mikk0451 (Brutal Doom Platinum)
+### Magazine system examples and code
+ Tango (Supercharge)
 
 # Other
-* Matt Eldrydge - The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)
-* Denis Belmondo - ZScript particle-based tracers
+### The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)
+Matt Eldrydge
+### Feedback, ideas, and assistance
+JM2098

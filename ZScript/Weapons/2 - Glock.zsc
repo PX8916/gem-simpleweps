@@ -13,7 +13,6 @@ class GSW_GlockAmmo : Ammo
 		+INVENTORY.IGNORESKILL
 	}
 }
-
 class GSW_Glock : GSW_Weapon replaces Pistol
 {
 	Default
@@ -31,7 +30,6 @@ class GSW_Glock : GSW_Weapon replaces Pistol
 		AttackSound "weapons/glock/fire";
 		Weapon.UpSound "weapons/glock/draw";
 
-		Decal "BulletChip";
 		DamageType "Bullet";
 	}
 	States

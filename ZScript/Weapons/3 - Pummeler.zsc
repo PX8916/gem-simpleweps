@@ -58,16 +58,17 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 				A_StartSound("weapons/pummeler/fire", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Slug:
-				A_StartSound("weapons/pummeler/debug", CHAN_WEAPON);
+				A_FireBullets(0, 0, 1, 150, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5);
+				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Poison:
-				A_StartSound("weapons/pummeler/debug", CHAN_WEAPON);
+				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Frag:
-				A_StartSound("weapons/pummeler/debug", CHAN_WEAPON);
+				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			default:
-				A_StartSound("weapons/pummeler/debug", CHAN_WEAPON);
+				A_StartSound("debug", CHAN_WEAPON);
 				break;
 		}
 	}

@@ -25,7 +25,6 @@ class GSW_Weapon : Weapon
 	{
 		return player.cmd.buttons & which;
 	}
-	// Credit Mikk0451
 	// Cheers, Brutal Doom Platinum!!
 	// Changes ammo icon only
 	action void ChangeAmmoIcon1(String AmmoIcon)
@@ -39,7 +38,7 @@ class GSW_Weapon : Weapon
 	Default
 	{
 		//$Category Weapons
-		+THRUGHOST // use -THRUGHOST to make it affect Heretic ghosts
+		+THRUGHOST // use -THRUGHOST to make it affect Heretic ghosts if you do make this compatible
 		//+WEAPON.NOAUTOSWITCHTO
 		Weapon.Kickback 100;
 		//Weapon.UpSound "weapons/draw_default";
@@ -57,7 +56,7 @@ class GSW_BulletTracer : _ZTracer
 	Default
 	{
 		Decal "BulletChip";
-		Speed 60;
+		Speed 70;
 		DamageFunction 0;
 	}
 	States

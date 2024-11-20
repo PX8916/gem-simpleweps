@@ -56,7 +56,7 @@ class _ZTracer : FastProjectile
 	override void Tick()
 	{
 	
-		if (level.frozen || globalfreeze) return;
+		if (Level.isFrozen()) return; // Originally (level.frozen || globalfreeze)
 		
 		x1 = pos.x;
 		y1 = pos.y;
