@@ -4,7 +4,7 @@
 	AUTHOR: (DENIS) BELMONDO
 	
 	USAGE: make a new class, inherit from _ZTracer and change the properties as
-		   you wish.
+			 you wish.
 	
 	you may use this in your project. just leave this comment at the top of 
 	this script and give credit please! thank you :^)
@@ -24,17 +24,32 @@ class _ZTracer : FastProjectile
 
 	float x1, y1, z1;
 	float x2, y2, z2;
-	
-	// intentional briticism to avoid conflicts with "color" keyword.
-	static const color colours[] = {
-		"9b 5b 13",
-		"af 7b 1f",
-		"c3 9b 2f",
-		"d7 bb 43",
-		"ff ff 73",
-		"ff ff 73" /* appears twice so a segment of this color is longer
-					than the others. */
+
+	// Cheers, themistercat!!
+	static const Color greyColors[] =
+	{
+		color(80, 56, 56),
+		color(104, 80, 80),
+		color(128, 104, 104),
+		color(144, 128, 128),
+		color(160, 144, 144),
+		color(192, 160, 160),
+		color(192, 192, 192)
 	};
+	
+	int mixColorR; property mixR: mixColorR;
+	int mixColorG; property mixG: mixColorG;
+	int mixColorB; property mixB: mixColorB;
+	bool mixInvert; property invert: mixInvert;
+
+	Color getBlend(int index, bool invertThis)
+	{ 
+		if(invertThis) { index = (greyColors.Size()-1)-index; }
+		int r = (float(greyColors[index].r/256.0) * float(mixColorR/256.0))	* 256;
+		int g = (float(greyColors[index].g/256.0) * float(mixColorG/256.0))	* 256;
+		int b = (float(greyColors[index].b/256.0) * float(mixColorB/256.0))	* 256;
+		return Color(r, g, b);
+	}
 	
 	// literally just stole this from wikipedia
 	float lerp(float v0, float v1, float t) {
@@ -70,7 +85,7 @@ class _ZTracer : FastProjectile
 		{
 			for(float i = 0; i < 1; i += TRACERSTEP) {
 				A_SpawnParticle (
-					colours[clamp(i * colours.Size(), 0, colours.Size() - 1)],
+					getBlend(clamp(i * greyColors.Size(), 0, greyColors.Size() - 1), mixInvert),
 					SPF_FULLBRIGHT,
 					TRACERDURATION,
 					TRACERSCALE * i,

@@ -50,7 +50,9 @@ Denis Belmondo
 ### Ammo icon swap
 Mikk0451 (Brutal Doom Platinum)
 ### Magazine system examples and code
- Tango (Supercharge)
+Tango (Supercharge)
+### Immense help making ZTracers recolorable
+themistercat
 
 # Other
 ### The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)

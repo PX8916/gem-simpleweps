@@ -1,19 +1,15 @@
 // "Pummeler" Pump Shotgun
 // A high-power shotgun.
 // Holds 8 shots in the mag, and one more in the chamber. Reflect this in the reload from empty!
-class GSW_PummelerAmmo : Ammo
+// First, though, define a spawner for those upgrades that replaces the Super Shotgun.
+class GSW_PummelerRandom : RandomSpawner replaces SuperShotgun
 {
 	Default
 	{
-		Inventory.Icon "PUMGQ0";
-		Inventory.Amount 0;
-		Inventory.MaxAmount 9;
-		Ammo.BackpackAmount 0;
-		Ammo.BackpackMaxAmount 9;
-		+INVENTORY.IGNORESKILL
+		DropItem "GSW_PummelerSlug", 255;
 	}
 }
-class GSW_PummelerSlugs : Inventory
+class GSW_PummelerSlug : Inventory
 {
 	Default
 	{
@@ -40,6 +36,19 @@ class GSW_PummelerFrag : Inventory
 		+INVENTORY.IGNORESKILL
 	}
 }
+
+class GSW_PummelerAmmo : Ammo
+{
+	Default
+	{
+		Inventory.Icon "PUMGQ0";
+		Inventory.Amount 0;
+		Inventory.MaxAmount 9;
+		Ammo.BackpackAmount 0;
+		Ammo.BackpackMaxAmount 9;
+		+INVENTORY.IGNORESKILL
+	}
+}
 class GSW_Pummeler : GSW_Weapon replaces Shotgun
 {
 	int curShellType;
@@ -49,6 +58,28 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 		Shell_Slug,
 		Shell_Poison,
 		Shell_Frag
+	}
+	static const Name AmmoTypes[] = { 'GSW_Pummeler', 'GSW_PummelerSlug', 'GSW_PummelerPoison', 'GSW_PummelerFrag' };
+	static const String AmmoIcons[] = { "PUMGQ0", "PUMGR0", "PUMGS0", "PUMGT0" };
+	action void SwitchToAmmo(int ammoToSwitch)
+	{
+		int breakcount = 0;
+		while(true)
+		{
+			if (invoker.owner.CountInv(invoker.AmmoTypes[ammoToSwitch]) > 0)
+			{
+					invoker.curShellType = ammoToSwitch;
+					ChangeAmmoIcon1(invoker.AmmoIcons[invoker.curShellType]);
+					break;
+			}
+			else
+			{
+					ammoToSwitch = (ammoToSwitch+1)%(invoker.AmmoTypes.Size());
+					breakcount++;
+			}
+			console.printf("ammotype %i", invoker.curShellType);
+			if(breakcount > 4) { break; }
+		}
 	}
 	action void A_FirePummeler()
 	{
@@ -62,6 +93,7 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Poison:
+				A_FireBullets(4, 4, 10, 15, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_PoisonTracer", -2.5, 7.5);
 				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Frag:
@@ -177,39 +209,12 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 			PUMG JIHG 2;
 			Goto Ready;
 		AltFire: // Cycle through owned shells
-			// Use the ShellTypes enum, owned shell types (items) and that int up there to determine what type you're on
-			// ChangeAmmoIcon1("PUMGS0");
 			PUMG GHIJ 2;
 		AltHold:
 			PUMG KLM 2;
 			PUMG N 2 {
 				A_StartSound("weapons/pummeler/load");
-				switch (invoker.curShellType) {
-					case GSW_Pummeler.Shell_Buckshot:
-						invoker.curShellType = GSW_Pummeler.Shell_Slug;
-						ChangeAmmoIcon1("PUMGR0");
-						break;
-					case GSW_Pummeler.Shell_Slug:
-						invoker.curShellType = GSW_Pummeler.Shell_Poison;
-						ChangeAmmoIcon1("PUMGS0");
-						break;
-					case GSW_Pummeler.Shell_Poison:
-						invoker.curShellType = GSW_Pummeler.Shell_Frag;
-						ChangeAmmoIcon1("PUMGT0");
-						break;
-					case GSW_Pummeler.Shell_Frag:
-						invoker.curShellType = GSW_Pummeler.Shell_Buckshot;
-						ChangeAmmoIcon1("PUMGQ0");
-						break;
-				}
-				/*
-				if (invoker.curShellType = GSW_Pummeler.Shell_Frag)
-				{
-					invoker.curShellType = GSW_Pummeler.Shell_Buckshot;
-					ChangeAmmoIcon1("PUMGQ0");
-				}
-				//else if (invoker.curShellType = GSW_Pummeler.Shell_Buckshot && owner.FindInventory("GSW_PummelerSlugs")) // ...no clue how to continue this
-				*/
+				invoker.SwitchToAmmo((invoker.curShellType+1)%(invoker.AmmoTypes.Size()));
 			}
 			PUMG OP 2;
 			PUMG A 0 A_ReFire;
@@ -220,5 +225,15 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 			PUMF B 1 Bright;
 			PUMF B 0 A_RemoveLight("Flash");
 			Stop;
+	}
+}
+
+class GSW_PoisonTracer : GSW_BulletTracer
+{
+	Default
+	{
+		_ZTracer.mixR 256;
+		_ZTracer.mixG 48;
+		_ZTracer.mixB 256;
 	}
 }

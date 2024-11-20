@@ -55,6 +55,8 @@ class GSW_BulletTracer : _ZTracer
 {
 	Default
 	{
+		_ZTracer.mixR 256;
+		_ZTracer.mixG 256;
 		Decal "BulletChip";
 		Speed 70;
 		DamageFunction 0;
