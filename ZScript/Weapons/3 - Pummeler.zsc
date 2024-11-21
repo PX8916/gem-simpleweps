@@ -6,34 +6,60 @@ class GSW_PummelerRandom : RandomSpawner replaces SuperShotgun
 {
 	Default
 	{
-		DropItem "GSW_PummelerSlug", 255;
+		DropItem "GSW_PummelerSlug";
+		DropItem "GSW_PummelerPoison";
+		DropItem "GSW_PummelerFrag";
 	}
 }
 class GSW_PummelerSlug : Inventory
 {
 	Default
 	{
+		+FLOATBOB
+		Inventory.PickupMessage "$GOTPUMMELERSLUG";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		+INVENTORY.IGNORESKILL
+	}
+	States
+	{
+		Spawn:
+			IPUM HIJKLFGGFLKJH 2;
+			Loop;
 	}
 }
 class GSW_PummelerPoison : Inventory
 {
 	Default
 	{
+		+FLOATBOB
+		Inventory.PickupMessage "$GOTPUMMELERPOISON";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		+INVENTORY.IGNORESKILL
+	}
+	States
+	{
+		Spawn:
+			IPUM MNOPQFGGFQPON 2;
+			Loop;
 	}
 }
 class GSW_PummelerFrag : Inventory
 {
 	Default
 	{
+		+FLOATBOB
+		Inventory.PickupMessage "$GOTPUMMELERFRAG";
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		+INVENTORY.IGNORESKILL
+	}
+	States
+	{
+		Spawn:
+			IPUM RSTUVFGGFVUTS 2;
+			Loop;
 	}
 }
 
@@ -41,7 +67,7 @@ class GSW_PummelerAmmo : Ammo
 {
 	Default
 	{
-		Inventory.Icon "PUMGQ0";
+		Inventory.Icon "IPUMA0";
 		Inventory.Amount 0;
 		Inventory.MaxAmount 9;
 		Ammo.BackpackAmount 0;
@@ -60,7 +86,7 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 		Shell_Frag
 	}
 	static const Name AmmoTypes[] = { 'GSW_Pummeler', 'GSW_PummelerSlug', 'GSW_PummelerPoison', 'GSW_PummelerFrag' };
-	static const String AmmoIcons[] = { "PUMGQ0", "PUMGR0", "PUMGS0", "PUMGT0" };
+	static const String AmmoIcons[] = { "IPUMA0", "IPUMH0", "IPUMM0", "IPUMR0" };
 	action void SwitchToAmmo(int ammoToSwitch)
 	{
 		int breakcount = 0;
@@ -93,10 +119,11 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Poison:
-				A_FireBullets(4, 4, 10, 15, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_PoisonTracer", -2.5, 7.5);
+				A_FireBullets(4, 4, 10, 10, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_PoisonTracer", -2.5, 7.5);
 				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Frag:
+				A_FireBullets(0, 0, 1, 0, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_FragTracer", -2.5, 7.5);
 				A_StartSound("debug", CHAN_WEAPON);
 				break;
 			default:
@@ -235,5 +262,22 @@ class GSW_PoisonTracer : GSW_BulletTracer
 		_ZTracer.mixR 256;
 		_ZTracer.mixG 48;
 		_ZTracer.mixB 256;
+		PoisonDamage 20, 20;
+	}
+}
+class GSW_FragTracer : GSW_BulletTracer
+{
+	Default
+	{
+		_ZTracer.mixR 128;
+		_ZTracer.mixG 128;
+		_ZTracer.mixB 128;
+	}
+	States
+	{
+		XDeath:
+		Death:
+			TNT1 A 0 A_SpawnItemEx("Rocket");
+			Stop;
 	}
 }

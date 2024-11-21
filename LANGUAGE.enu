@@ -10,6 +10,9 @@ PLACEHOLDER = "You shouldn't see this.";
 GOTGLOCK = "\c[White]You picked up the \c[Black]Glock 17\c[White]! (Slot 2, tap to fire faster)";
 // Slot 3 //
 GOTPUMMELER = "\c[White]You picked up the \c[DarkGray]\"Pummeler\" Pump Shotgun\c[White]! (Slot 3)";
+GOTPUMMELERSLUG = "\c[White]Collected the \c[Green]Slug Chip\c[White] for the \c[DarkGray]Pummeler\c[White].";
+GOTPUMMELERPOISON = "\c[White]Collected the \c[Purple]Poison Chip\c[White] for the \c[DarkGray]Pummeler\c[White].";
+GOTPUMMELERFRAG = "\c[White]Collected the \c[Black]Frag Chip\c[White] for the \c[DarkGray]Pummeler\c[White].";
 // Slot 4 //
 GOTBUZZKILLER = "\c[White]You picked up the \c[Gray]\"Buzzkiller\" Machine Gun\c[White]! (Slot 4)";
 // Slot 5 //
