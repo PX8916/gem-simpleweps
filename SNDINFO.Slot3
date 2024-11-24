@@ -1,5 +1,6 @@
 // "Pummeler" Shotgun //
 weapons/pummeler/fire		"Sounds/Weapons/3 - Pummeler/fire.wav"
+weapons/pummeler/fire-slug	"Sounds/Weapons/3 - Pummeler/fire-slug.wav"
 weapons/pummeler/pumpin		"Sounds/Weapons/3 - Pummeler/pumpin.wav"
 weapons/pummeler/pumpout	"Sounds/Weapons/3 - Pummeler/pumpout.wav"
 weapons/pummeler/draw		"Sounds/Weapons/3 - Pummeler/draw.wav"

@@ -26,13 +26,15 @@ GOTBUZZKILLER = "\c[White]You picked up the \c[Gray]\"Buzzkiller\" Machine Gun\c
 // Weapon obituary messages //
 // ======================== //
 // Slot 1 //
-KILLKNIFE = "%o was given the ol' swish-swish-stab by %k's \c[Brown]Knife\c[Untranslated].";
+KILLKNIFE = "%o was given the ol' swish-swish-stab by %k's \c[Brown]Knife\c[Gold].";
 // Slot 2 //
-KILLGLOCK = "%o was plinked by %k's \c[Black]Glock\c[Untranslated].";
+KILLGLOCK = "%o was plinked by %k's \c[Black]Glock\c[Gold].";
 // Slot 3 //
-KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Untranslated].";
+KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Gold].";
+KILLPUMMELERPOISON = "%o took a lethal dose of %k's \c[Purple]Poison Chip\c[Gold]-enhanced \c[DarkGray]Pummeler\c[Gold].";
+KILLPUMMELERFRAG = "%o was blown to smithereens by %k's \c[Black]Frag Chip\c[Gold]-enhanced \c[DarkGray]Pummeler\c[Gold].";
 // Slot 4 //
-KILLBUZZKILLER = "%o had their buzz killed by %k's \c[DarkGray]Buzzkiller\c[Untranslated].";
+KILLBUZZKILLER = "%o had their buzz killed by %k's \c[DarkGray]Buzzkiller\c[Gold].";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -64,6 +66,7 @@ TAG_BUZZKILLER = "\"Buzzkiller\" Machine Gun";
 GOTBULLETMAG = "\c[White]Picked up a \c[Gold]magazine of bullets\c[White].";
 GOTBULLETBOX = "\c[White]Picked up a \c[Gold]box of bullets\c[White].";
 GOTSHELLBOXSMALL = "\c[White]Picked up a \c[Red]small box of shotgun shells\c[White].";
+GOTSHELLBOXMEDIUM = "\c[White]Picked up a \c[Red]medium box of shotgun shells\c[White].";
 GOTSHELLBOXLARGE = "\c[White]Picked up a \c[Red]large box of shotgun shells\c[White].";
 
 // ======================== //

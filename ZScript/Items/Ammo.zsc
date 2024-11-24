@@ -46,6 +46,20 @@ class GSW_SmallShellBox : Shell replaces Shell
 			Stop;
 	}
 }
+class GSW_MediumShellBox : Shell
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSHELLBOXMEDIUM";
+		Inventory.Amount 8; // 2x
+	}
+	States
+	{
+		Spawn:
+			ISHL B -1;
+			Stop;
+	}
+}
 class GSW_LargeShellBox : ShellBox replaces ShellBox
 {
 	Default
@@ -55,7 +69,7 @@ class GSW_LargeShellBox : ShellBox replaces ShellBox
 	States
 	{
 		Spawn:
-			ISHL B -1;
+			ISHL C -1;
 			Stop;
 	}
 }

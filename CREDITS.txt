@@ -9,6 +9,7 @@ Lobotomy Software (PowerSlave/Exhumed)
 dzierdan
 fgsfds
 SoniK.O.Fan/Tesefy (Brutal Doom)
+Mengo329 (Poison Cloud from Bass Game)
 ### "Buzzkiller" Machine Gun
 Captain J
 ### Knife
@@ -33,6 +34,7 @@ Valve Software (Counter-Strike: Global Offensive)
 Treyarch (Call of Duty: World at War) (fire)
 Crowbar Collective (Black Mesa) (pump)
 Tripwire Interactive (Killing Floor) (draw, pickup, load)
+TS_SOUND (fire slug)
 ### "Buzzkiller" Machine Gun
 Treyarch (Call of Duty: Black Ops)
 ### Knife
