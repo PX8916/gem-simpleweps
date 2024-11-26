@@ -1,34 +1,32 @@
-class GSW_BulletMag : Ammo replaces Clip
+class GSW_SMGBattery : Ammo replaces Clip
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTBULLETMAG";
-		Inventory.Amount 10;
-		Inventory.MaxAmount 200;
-		Ammo.BackpackAmount 10;
-		Ammo.BackpackMaxAmount 400;
-		// No weapon in this mod actually uses a mag,
-		// aside from the Glock, which doesn't use ammo.
-		Inventory.Icon "IBULB0";
+		Inventory.PickupMessage "$GOTSMGBATTERY";
+		Inventory.Amount 20;
+		Inventory.MaxAmount 300;
+		Ammo.BackpackAmount 20;
+		Ammo.BackpackMaxAmount 600;
+		Inventory.Icon "IBATA0";
 	}
 	States
 	{
 		Spawn:
-			IBUL A -1;
+			IBAT A -1;
 			Stop;
 	}
 }
-class GSW_BulletBox : GSW_BulletMag replaces ClipBox
+class GSW_SMGBatteryPack : GSW_SMGBattery replaces ClipBox
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTBULLETBOX";
-		Inventory.Amount 50;
+		Inventory.PickupMessage "$GOTSMGBATTERYPACK";
+		Inventory.Amount 60;
 	}
 	States
 	{
 		Spawn:
-			IBUL B -1;
+			IBAT B -1;
 			Stop;
 	}
 }

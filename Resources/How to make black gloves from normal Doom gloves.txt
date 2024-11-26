@@ -1,0 +1,1 @@
+Desaturate > Brightness -127 > Brightness -48

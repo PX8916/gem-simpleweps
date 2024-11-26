@@ -10,8 +10,9 @@ dzierdan
 fgsfds
 SoniK.O.Fan/Tesefy (Brutal Doom)
 Mengo329 (Poison Cloud from Bass Game)
-### "Buzzkiller" Machine Gun
+### MMG First-Try Shock SMG
 Captain J
+Sgt. Shivers (original reload animation, slightly edited)
 ### Knife
 TiberiumSoul (RIP)
 Farhan
@@ -35,8 +36,8 @@ Treyarch (Call of Duty: World at War) (fire)
 Crowbar Collective (Black Mesa) (pump)
 Tripwire Interactive (Killing Floor) (draw, pickup, load)
 TS_SOUND (fire slug)
-### "Buzzkiller" Machine Gun
-Treyarch (Call of Duty: Black Ops)
+### MMG First-Try Shock SMG
+Raven Software (Quake 4)
 ### Knife
 None yet
 

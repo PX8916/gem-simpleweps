@@ -14,7 +14,7 @@ GOTPUMMELERSLUG = "\c[White]Collected the \c[Green]Slug Chip\c[White] for the \c
 GOTPUMMELERPOISON = "\c[White]Collected the \c[Purple]Poison Chip\c[White] for the \c[DarkGray]Pummeler\c[White].";
 GOTPUMMELERFRAG = "\c[White]Collected the \c[Black]Frag Chip\c[White] for the \c[DarkGray]Pummeler\c[White].";
 // Slot 4 //
-GOTBUZZKILLER = "\c[White]You picked up the \c[Gray]\"Buzzkiller\" Machine Gun\c[White]! (Slot 4)";
+GOTSHOCKSMG = "\c[White]You picked up the \c[LightBlue]Shock SMG\c[White]! (Slot 4)";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -34,7 +34,7 @@ KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Gold].";
 KILLPUMMELERPOISON = "%o took a lethal dose of %k's \c[Purple]Poison Chip\c[Gold]-enhanced \c[DarkGray]Pummeler\c[Gold].";
 KILLPUMMELERFRAG = "%o was blown to smithereens by %k's \c[Black]Frag Chip\c[Gold]-enhanced \c[DarkGray]Pummeler\c[Gold].";
 // Slot 4 //
-KILLBUZZKILLER = "%o had their buzz killed by %k's \c[DarkGray]Buzzkiller\c[Gold].";
+KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -52,7 +52,7 @@ TAG_GLOCK = "Glock 17";
 // Slot 3 //
 TAG_PUMMELER = "\"Pummeler\" Shotgun";
 // Slot 4 //
-TAG_BUZZKILLER = "\"Buzzkiller\" Machine Gun";
+TAG_SHOCKSMG = "Shock SMG";
 // Slot 5 //
 // Slot 6 //
 // Slot 7 //
@@ -63,8 +63,8 @@ TAG_BUZZKILLER = "\"Buzzkiller\" Machine Gun";
 // ======================== //
 //   Ammo pickup messages   //
 // ======================== //
-GOTBULLETMAG = "\c[White]Picked up a \c[Gold]magazine of bullets\c[White].";
-GOTBULLETBOX = "\c[White]Picked up a \c[Gold]box of bullets\c[White].";
+GOTSMGBATTERY = "\c[White]Picked up an \c[Brick]SMG battery\c[White].";
+GOTSMGBATTERYPACK = "\c[White]Picked up a \c[Brick]pack of SMG batteries\c[White].";
 GOTSHELLBOXSMALL = "\c[White]Picked up a \c[Red]small box of shotgun shells\c[White].";
 GOTSHELLBOXMEDIUM = "\c[White]Picked up a \c[Red]medium box of shotgun shells\c[White].";
 GOTSHELLBOXLARGE = "\c[White]Picked up a \c[Red]large box of shotgun shells\c[White].";
@@ -80,9 +80,9 @@ GOTSTIMPACKNEED = "\c[White]Picked up a \c[Red]stimpack\c[White]. Feeling a bit 
 GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
 GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
 // Armor //
-GOTSECURITYARMOR = "\c[White]Picked up the \c[Green]Security Armor\c[White]. (100 armor, 33% protection)";
-GOTCOMBATARMOR = "\c[White]Picked up the \c[Blue]Combat Armor\c[White]. (200 armor, 50% protection)";
+GOTSECURITYARMOR = "\c[White]Picked up the \c[Green]Security Armor\c[White]. (100 suit charge)";
+GOTCOMBATARMOR = "\c[White]Picked up the \c[Blue]Combat Armor\c[White]. (200 suit charge)";
 
 
 // Powerups //
-GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)";
+GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)"; // soon to change i'm sure

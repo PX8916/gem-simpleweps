@@ -13,7 +13,7 @@ class GSW_PummelerRandom : RandomSpawner replaces SuperShotgun
 	Default
 	{
 		DropItem "GSW_PummelerSlug";
-		DropItem "GSW_PummelerPoison";
+		//DropItem "GSW_PummelerPoison"; // Disabled spawning Poison chip for now, since it doesn't work how I want it to.
 		DropItem "GSW_PummelerFrag";
 	}
 }
