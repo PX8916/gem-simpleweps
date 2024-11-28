@@ -1,6 +1,6 @@
 // Shock SMG
 // It's an SMG, but the tracers are blue.
-// Holds 30 shots in the mag, since it's a battery-powered weapon.
+// Holds 60 shots in the mag, since it's a battery-powered weapon.
 class GSW_ShockSMGAmmo : Ammo
 {
 	Default
@@ -9,7 +9,7 @@ class GSW_ShockSMGAmmo : Ammo
 		Inventory.Amount 0;
 		Inventory.MaxAmount 60;
 		Ammo.BackpackAmount 0;
-		Ammo.BackpackMaxAmount 30;
+		Ammo.BackpackMaxAmount 60; // Oops! Forgot to set this to 60.
 		+INVENTORY.IGNORESKILL
 	}
 }
@@ -35,8 +35,8 @@ class GSW_ShockSMG : GSW_Weapon replaces Chaingun // Make a spawner when you fin
 		Inventory.PickupSound "weapons/shocksmg/pickup";
 		AttackSound "weapons/shocksmg/fire";
 		
-		Decal "BulletChip";
-		DamageType "Shotgun";
+		Decal "BulletChip"; // temp
+		DamageType "Bullet";
 	}
 	States
 	{
@@ -59,7 +59,7 @@ class GSW_ShockSMG : GSW_Weapon replaces Chaingun // Make a spawner when you fin
 				A_OverlayAlpha(-2, 0.33);
 				A_OverlayFlags(-2, PSPF_ALPHA|PSPF_RENDERSTYLE, true);
 				A_OverlayRenderStyle(-2, STYLE_Multiply);
-				A_FireBullets(2, 2, 1, 16, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_EnergyTracer", -2, 7.5);
+				A_FireBullets(2, 2, 1, 16, "GSW_EnergyPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_EnergyTracer", -2, 7.5);
 				A_StartSound("weapons/shocksmg/fire_back", volume: 0.5);
 			}
 			SSMG B 1;
@@ -111,5 +111,25 @@ class GSW_EnergyTracer : GSW_BulletTracer
 		_ZTracer.mixR 192;
 		_ZTracer.mixG 256;
 		_ZTracer.mixB 256;
+	}
+}
+class GSW_EnergyPuff : Actor
+{
+	Default
+	{
+		+NOBLOCKMAP
+		+NOGRAVITY
+		+ALLOWPARTICLES
+		+RANDOMIZE
+		+PUFFONACTORS
+		RenderStyle "Add";
+		Alpha 0.5;
+		Translation "0:255=%[0,0,0.75]:[0.75,1,1]";
+	}
+	States
+	{
+		Spawn:
+			CPUF ABCDEFG 3 Bright;
+			Stop;
 	}
 }

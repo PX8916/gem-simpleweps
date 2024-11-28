@@ -1,0 +1,19 @@
+class GSW_Explosion : Actor
+{
+	Default
+	{
+		+NOGRAVITY
+		+NOCLIP
+		+NOBLOCKMAP
+		+NOTELEPORT
+		+NOINTERACTION
+		//+FORCEXYBILLBOARD
+		RenderStyle "Add";
+	}
+	States
+	{
+		Spawn:
+			XPLD ABCDEF 2 Bright;
+			Stop;
+	}
+}

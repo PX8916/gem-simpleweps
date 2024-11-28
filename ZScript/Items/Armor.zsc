@@ -1,30 +1,49 @@
-class GSW_SecurityArmor : GreenArmor replaces GreenArmor
+class GSW_SmallSuitBattery : BasicArmorBonus replaces ArmorBonus
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTSECURITYARMOR";
-		Inventory.Icon "IARME0";
+		Radius 20;
+		Height 16;
+		Inventory.Pickupmessage "$GOTSMALLBATTERY";
+		Inventory.Icon "IARMF0";
+		Armor.Savepercent 50;
+		Armor.Saveamount 1;
+		Armor.Maxsaveamount 400;
+		+COUNTITEM
+		+INVENTORY.ALWAYSPICKUP
 	}
 	States
 	{
 		Spawn:
-			IARM E 6;
-			IARM F 7 Bright;
+			IARM ABCDDDCB 2 Bright;
 			Loop;
 	}
 }
-class GSW_CombatArmor : BlueArmor replaces BlueArmor
+class GSW_MediumSuitBattery : GSW_SmallSuitBattery replaces GreenArmor
 {
 	Default
 	{
-		Inventory.PickupMessage "$GOTCOMBATARMOR";
-		Inventory.Icon "IARMG0";
+		Inventory.Pickupmessage "$GOTMEDIUMBATTERY";
+		Armor.Saveamount 25;
 	}
 	States
 	{
 		Spawn:
-			IARM G 6;
-			IARM H 7 Bright;
-			Loop;
+			IARM E -1 Bright;
+			Stop;
+	}
+}
+class GSW_LargeSuitBattery : GSW_SmallSuitBattery replaces BlueArmor
+{
+	Default
+	{
+		Inventory.Pickupmessage "$GOTLARGEBATTERY";
+		Armor.Saveamount 50;
+	}
+	States
+	{
+		Spawn:
+			IARM F -1 Bright;
+			Stop;
 	}
 }

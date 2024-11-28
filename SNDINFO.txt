@@ -1,1 +1,12 @@
 debug		"Sounds/kl_fiddlesticks.wav" // Oh, fiddlesticks! What now?
+
+// Weapons that don't go into slots...
+weapons/stickybeep	"Sounds/Weapons/Shoulder Stickies/StickyBeep.wav"
+
+weapons/stickyshot1	"Sounds/Weapons/Shoulder Stickies/Sticky1.ogg"
+weapons/stickyshot2	"Sounds/Weapons/Shoulder Stickies/Sticky2.ogg"
+weapons/stickyshot3	"Sounds/Weapons/Shoulder Stickies/Sticky3.ogg"
+weapons/stickyshot4	"Sounds/Weapons/Shoulder Stickies/Sticky4.ogg"
+weapons/stickyshot5	"Sounds/Weapons/Shoulder Stickies/Sticky5.ogg"
+
+$random weapons/stickyshot { weapons/stickyshot1 weapons/stickyshot2 weapons/stickyshot3 weapons/stickyshot4 weapons/stickyshot5 }

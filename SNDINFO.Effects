@@ -1,0 +1,6 @@
+// Explosions //
+effects/explosion			"Sounds/Effects/Explosions/explode.wav"
+effects/explosion_small		"Sounds/Effects/Explosions/explodemini.wav"
+
+$attenuation effects/explosion 0.25
+$attenuation effects/explosion_small 0.25

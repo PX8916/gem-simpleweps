@@ -5,7 +5,7 @@ class GSW_GlockAmmo : Ammo
 {
 	Default
 	{
-		Inventory.Icon "GLOCZ0";
+		Inventory.Icon "GLOC[0";
 		Inventory.Amount 0;
 		Inventory.MaxAmount 18;
 		Ammo.BackpackAmount 0;

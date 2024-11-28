@@ -1,3 +1,4 @@
+// Flashes
 flickerlight2 GSW_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.pk3
 {
     color 1.0 0.8 0.2
@@ -7,7 +8,6 @@ flickerlight2 GSW_GunFlash // A copy of ZOMBIEATK, for if you don't have lights.
     offset 0 40 0
 	attenuate 1
 }
-
 flickerlight2 GSW_ShockFlash
 {
     color 0.2 0.8 1.0

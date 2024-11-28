@@ -80,9 +80,16 @@ GOTSTIMPACKNEED = "\c[White]Picked up a \c[Red]stimpack\c[White]. Feeling a bit 
 GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
 GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
 // Armor //
-GOTSECURITYARMOR = "\c[White]Picked up the \c[Green]Security Armor\c[White]. (100 suit charge)";
-GOTCOMBATARMOR = "\c[White]Picked up the \c[Blue]Combat Armor\c[White]. (200 suit charge)";
+GOTSMALLBATTERY = "\c[White]Picked up a \c[Teal]small suit battery\c[White]. (+1 AP)";
+GOTMEDIUMBATTERY = "\c[White]Picked up a \c[Teal]medium suit battery\c[White]. (+25 AP)";
+GOTLARGEBATTERY = "\c[White]Picked up a \c[Teal]large suit battery\c[White]. (+50 AP)";
 
 
 // Powerups //
 GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)"; // soon to change i'm sure
+
+
+// ======================== //
+//         Ammo tags        //
+// ======================== //
+AMMO_SMGBATTERIES = "SMG Batteries";

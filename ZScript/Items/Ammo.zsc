@@ -8,6 +8,7 @@ class GSW_SMGBattery : Ammo replaces Clip
 		Ammo.BackpackAmount 20;
 		Ammo.BackpackMaxAmount 600;
 		Inventory.Icon "IBATA0";
+		Tag "$AMMO_SMGBATTERIES";
 	}
 	States
 	{

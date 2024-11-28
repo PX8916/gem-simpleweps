@@ -21,7 +21,7 @@ Mace
 Potetobloke
 
 ## Items
-### Bullet and shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack
+### Shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack
 Zrrion the Insect
 
 
@@ -36,8 +36,11 @@ Treyarch (Call of Duty: World at War) (fire)
 Crowbar Collective (Black Mesa) (pump)
 Tripwire Interactive (Killing Floor) (draw, pickup, load)
 TS_SOUND (fire slug)
+Michel Baradari (apollo-music.de) (explosion)
 ### MMG First-Try Shock SMG
 Raven Software (Quake 4)
+### Grenade Launcher
+Michel Baradari (apollo-music.de) (explosion)
 ### Knife
 None yet
 

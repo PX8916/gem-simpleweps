@@ -1,4 +1,5 @@
 GameInfo
 {
+	StatusBarClass = "GSW_HUD"
 	PlayerClasses = "GSW_Player"
 }

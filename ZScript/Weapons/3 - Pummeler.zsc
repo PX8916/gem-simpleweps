@@ -326,7 +326,7 @@ class GSW_FragTracer : GSW_BulletTracer
 		_ZTracer.mixR 128;
 		_ZTracer.mixG 128;
 		_ZTracer.mixB 128;
-		DeathSound "weapons/rocklx";
+		DeathSound "effects/explosion_small";
 		Obituary "$KILLPUMMELERFRAG";
 		+DEHEXPLOSION
 		+ZDOOMTRANS
@@ -335,10 +335,10 @@ class GSW_FragTracer : GSW_BulletTracer
 	{
 		XDeath:
 		Death:
-			TNT1 A 0 A_Stop;
-			MISL B 8 Bright A_Explode; // Copied from Rocket
-			MISL C 6 Bright;
-			MISL D 4 Bright;
+			TNT1 A 0 {
+				A_Explode();
+				A_SpawnItemEx("GSW_Explosion");
+			}
 			Stop;
 	}
 }

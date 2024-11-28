@@ -7,6 +7,7 @@ class GSW_Player : DoomPlayer
 		Player.StartItem "GSW_PummelerAmmo", 9;
 		Player.StartItem "GSW_ShockSMGAmmo", 60;
 		Player.StartItem "GSW_Fist";
+//		Player.StartItem "GSW_ShoulderStickyLauncher";
 		Player.AttackZOffset 11;
 	}
 }
