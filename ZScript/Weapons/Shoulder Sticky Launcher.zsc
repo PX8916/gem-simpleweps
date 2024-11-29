@@ -56,7 +56,7 @@ class GSW_ShoulderStickyLauncher : CustomInventory replaces RocketLauncher
 			TNT1 A 1
 			{
 				// Check if +user2 is pressed:
-				if (player.health > 0 && player.cmd.buttons & BT_USER2 && invoker.owner.CountInv("GSW_StickyAmmo") > 0)
+				if (player.health > 0 && player.cmd.buttons & BT_USER2 && (invoker.owner.CountInv("GSW_StickyAmmo") > 0 || (sv_infiniteammo || (invoker.owner.FindInventory ('PowerInfiniteAmmo', true) != null))))
 				{
 					// move to DoKick if so:
 					return ResolveState("DoSticky");
@@ -66,19 +66,24 @@ class GSW_ShoulderStickyLauncher : CustomInventory replaces RocketLauncher
 			}
 			loop;
 		DoSticky:
-			TNT1 A 0 A_OverlayOffset(OverlayID(), -20, WEAPONTOP);
-			STKI ABCDEFF 2;
+			STKI A 2 Offset(-377, 171);
+			STKI A 2 Offset(-374, 131); // B
+			STKI A 2 Offset(-371, 91); // C
+			STKI A 2 Offset(-368, 71); // D
+			STKI A 2 Offset(-365, 51); // E
+			STKI A 4 Offset(-350, 13); // F
 		ReFireSticky:
-			STKI F 2 {
-				if (invoker.owner.CountInv("GSW_StickyAmmo") > 0)
+			STKI A 2 Offset(-350, 13) { // F
+				if (invoker.owner.CountInv("GSW_StickyAmmo") > 0 || (sv_infiniteammo || (invoker.owner.FindInventory ('PowerInfiniteAmmo', true) != null)))
 				{
 					A_Overlay(STICKYLAYER - 1, "FlashSticky");
 					A_OverlayOffset(STICKYLAYER - 1, -20, WEAPONTOP);
 				}
 			}
-			STKI G 3 {
-				if (invoker.owner.TakeInventory("GSW_StickyAmmo", 1, true, true) == true)
+			STKI A 3 Offset(-368, 5) { // G
+				if (invoker.owner.CountInv("GSW_StickyAmmo") > 0 || (sv_infiniteammo || (invoker.owner.FindInventory ('PowerInfiniteAmmo', true) != null)))
 				{
+					invoker.owner.TakeInventory("GSW_StickyAmmo", 1, true, true);
 					A_FireProjectile("GSW_ShoulderSticky", -3.5, false, -20, 7, FPF_TRANSFERTRANSLATION);
 					A_StartSound("weapons/stickyshot");
 					return ResolveState(null);
@@ -88,8 +93,8 @@ class GSW_ShoulderStickyLauncher : CustomInventory replaces RocketLauncher
 					return ResolveState("FinishSticky");
 				}
 			}
-			STKI F 12;
-			STKI E 0
+			STKI A 12 Offset(-350, 13); // F
+			STKI A 0
 			{
 				if (player.cmd.buttons & BT_USER2 && player.oldbuttons & BT_USER2) // do an ammo check later
 				{
@@ -98,7 +103,11 @@ class GSW_ShoulderStickyLauncher : CustomInventory replaces RocketLauncher
 				return ResolveState(null);
 			}
 		FinishSticky:
-			STKI EDCBA 2;
+			STKI A 2 Offset(-365, 51); // E
+			STKI A 2 Offset(-368, 71); // D
+			STKI A 2 Offset(-371, 91); // C
+			STKI A 2 Offset(-374, 131); // B
+			STKI A 2 Offset(-377, 171); // A
 			Goto ReadySticky; //Note that we go back to ready from here
 		FlashSticky:
 			STKF ABCCDD 1;
@@ -171,6 +180,7 @@ class GSW_ShoulderSticky : Actor
 			Goto Death;
 		Explode:
 			TNT1 A 0 {
+				invoker.DamageType = "Rocket";
 				A_Explode();
 				A_StartSound("effects/explosion_small");
 				A_SpawnItemEx("GSW_Explosion");
