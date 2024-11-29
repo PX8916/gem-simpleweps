@@ -16,11 +16,15 @@ GOTPUMMELERFRAG = "\c[White]Collected the \c[Black]Frag Chip\c[White] for the \c
 // Slot 4 //
 GOTSHOCKSMG = "\c[White]You picked up the \c[LightBlue]Shock SMG\c[White]! (Slot 4)";
 // Slot 5 //
+// None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 // Slot 6 //
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
 // Slot 0 //
+
+// Other //
+GOTSTICKYLAUNCHER = "\c[White]You picked up the \c[Olive]shoulder-mounted stickybomb launcher\c[White]! (User 2)";
 
 // ======================== //
 // Weapon obituary messages //
@@ -36,11 +40,15 @@ KILLPUMMELERFRAG = "%o was blown to smithereens by %k's \c[Black]Frag Chip\c[Gol
 // Slot 4 //
 KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].";
 // Slot 5 //
+// None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 // Slot 6 //
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
 // Slot 0 //
+
+// Other //
+KILLSTICKYLAUNCHER = "%o couldn't quite get %k's \c[Olive]sticky bomb\c[Gold] off of %hself in time.";
 
 // ======================== //
 //       Weapon names       //
@@ -54,6 +62,7 @@ TAG_PUMMELER = "\"Pummeler\" Shotgun";
 // Slot 4 //
 TAG_SHOCKSMG = "Shock SMG";
 // Slot 5 //
+// None -- The Sticky Launcher is usable at any time, and is not a normal weapon. Also no need for a tag.
 // Slot 6 //
 // Slot 7 //
 // Slot 8 //
@@ -68,6 +77,8 @@ GOTSMGBATTERYPACK = "\c[White]Picked up a \c[Brick]pack of SMG batteries\c[White
 GOTSHELLBOXSMALL = "\c[White]Picked up a \c[Red]small box of shotgun shells\c[White].";
 GOTSHELLBOXMEDIUM = "\c[White]Picked up a \c[Red]medium box of shotgun shells\c[White].";
 GOTSHELLBOXLARGE = "\c[White]Picked up a \c[Red]large box of shotgun shells\c[White].";
+GOTSTICKYAMMO = "\c[White]Picked up a \c[Olive]single sticky bomb\c[White].";
+GOTSTICKYBOX = "\c[White]Picked up a \c[Olive]box of sticky bombs\c[White].";
 
 // ======================== //
 //   Item pickup messages   //
@@ -93,3 +104,4 @@ GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)"; // so
 //         Ammo tags        //
 // ======================== //
 AMMO_SMGBATTERIES = "SMG Batteries";
+AMMO_STICKYBOMBS = "Sticky Bombs";

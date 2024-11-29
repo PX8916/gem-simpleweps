@@ -159,6 +159,12 @@ class GSW_HUD : BaseStatusBar
 			DrawString(mHUDFont, FormatNumber(ammotype2.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
 			invY -= 20;
 		}
+		let stickies = CPlayer.mo.FindInventory("GSW_StickyAmmo", true);
+		if (stickies != null)
+		{
+			DrawInventoryIcon(stickies, (-70, 20));
+			DrawString(mHUDFont, FormatNumber(stickies.Amount, 3), (-20, 4), DI_TEXT_ALIGN_RIGHT);
+		}
 		if (!isInventoryBarVisible() && !Level.NoInventoryBar && CPlayer.mo.InvSel != null)
 		{
 			DrawInventoryIcon(CPlayer.mo.InvSel, (-14, invY + 17), DI_DIMDEPLETED);

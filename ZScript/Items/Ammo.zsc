@@ -72,3 +72,38 @@ class GSW_LargeShellBox : ShellBox replaces ShellBox
 			Stop;
 	}
 }
+
+class GSW_StickyAmmo : Ammo replaces RocketAmmo
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSTICKYAMMO";
+		Inventory.Amount 1;
+		Inventory.MaxAmount 50;
+		Ammo.BackpackAmount 2;
+		Ammo.BackpackMaxAmount 100;
+		Inventory.Icon "ISTKA0";
+		Tag "$AMMO_STICKYBOMBS";
+		+INVENTORY.KEEPDEPLETED
+	}
+	States
+	{
+		Spawn:
+			ISTK A -1;
+			Stop;
+	}
+}
+class GSW_StickyBox : GSW_StickyAmmo replaces RocketBox
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTSTICKYBOX";
+		Inventory.Amount 5;
+	}
+	States
+	{
+		Spawn:
+			ISTK B -1;
+			Stop;
+	}
+}
