@@ -184,7 +184,7 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 			PUMG E 2; // Pump, ejecting the last shell if you're empty
 			PUMG F 6 A_StartSound("weapons/pummeler/pumpin");
 			PUMG E 2;
-			PUMG A 8 A_StartSound("weapons/pummeler/pumpout");
+			PUMG A 7 A_StartSound("weapons/pummeler/pumpout");
 			PUMG A 4 A_ReFire;
 			Goto Ready;
 		FireEmpty:
@@ -213,7 +213,7 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 			PUMG E 2; // Pump, but only if you're empty
 			PUMG F 6 A_StartSound("weapons/pummeler/pumpin");
 			PUMG E 2;
-			PUMG A 8 A_StartSound("weapons/pummeler/pumpout");
+			PUMG A 7 A_StartSound("weapons/pummeler/pumpout");
 			Goto Ready;
 
 		Reload:
