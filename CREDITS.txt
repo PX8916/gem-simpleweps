@@ -1,4 +1,4 @@
-# Sprites
+# Sprites & Graphics
 ## Weapons
 ### Glock 17
 cybermonday
@@ -13,6 +13,8 @@ Mengo329 (Poison Cloud from Bass Game)
 ### MMG First-Try Shock SMG
 Captain J
 Sgt. Shivers (original reload animation, slightly edited)
+### Shoulder-mounted Stickybomb Launcher
+SoniK.O.Fan/Tesefy
 ### Knife
 TiberiumSoul (RIP)
 Farhan
@@ -23,8 +25,12 @@ Potetobloke
 ## Items
 ### Shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack
 Zrrion the Insect
+### SMG battery
+Captain J
 
-
+## Other
+### Font
+Rune B/rubjo (Victor Mono)
 
 # Sounds
 ## Weapons
@@ -36,14 +42,17 @@ Treyarch (Call of Duty: World at War) (fire)
 Crowbar Collective (Black Mesa) (pump)
 Tripwire Interactive (Killing Floor) (draw, pickup, load)
 TS_SOUND (fire slug)
-Michel Baradari (apollo-music.de) (explosion)
 ### MMG First-Try Shock SMG
 Raven Software (Quake 4)
-### Grenade Launcher
-Michel Baradari (apollo-music.de) (explosion)
+### Shoulder-mounted Stickybomb Launcher
+SeanTheBermanator (Doom Sound Bulb, DSTINK)
+
 ### Knife
 None yet
 
+## Effects
+### Explosions
+Michel Baradari (apollo-music.de)
 ## Other
 ### Debug sound ("Oh, fiddlesticks! What now?" - Dr. Kleiner)
 Valve (Half-Life 2)
@@ -63,5 +72,5 @@ themistercat
 # Other
 ### The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)
 Matt Eldrydge
-### Feedback, ideas, and assistance
+### Feedback, ideas, and assistance (sprites and code)
 JM2098

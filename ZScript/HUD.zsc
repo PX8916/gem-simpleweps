@@ -1,22 +1,20 @@
 class GSW_HUD : BaseStatusBar
 {
-	HUDFont mHUDFont;
-	HUDFont mIndexFont;
-	HUDFont mAmountFont;
+	HUDFont mBigFont;
+	HUDFont mSmallFont;
 	InventoryBarState diparms;
 	
 
 	override void Init()
 	{
 		Super.Init();
-		SetSize(32, 320, 200);
+		SetSize(0, 320, 200);
 
 		// Create the font used for the fullscreen HUD
-		Font fnt = "HUDFONT_DOOM";
-		mHUDFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), Mono_CellLeft, 1, 1);
-		fnt = "INDEXFONT_DOOM";
-		mIndexFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), Mono_CellLeft);
-		mAmountFont = HUDFont.Create("INDEXFONT");
+		Font fnt = "BigUpper";
+		mBigFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), Mono_CellLeft, 1, 1);
+		fnt = "SmallFont";
+		mSmallFont = HUDFont.Create(fnt, fnt.GetCharWidth("0"), Mono_CellLeft);
 		diparms = InventoryBarState.Create();
 	}
 
@@ -24,110 +22,11 @@ class GSW_HUD : BaseStatusBar
 	{
 		Super.Draw (state, TicFrac);
 
-		BeginHUD();
-		DrawFullScreenStuff();
-	}
-
-	protected void DrawMainBar (double TicFrac)
-	{
-		DrawImage("STBAR", (0, 168), DI_ITEM_OFFSETS);
-		DrawImage("STTPRCNT", (90, 171), DI_ITEM_OFFSETS);
-		DrawImage("STTPRCNT", (221, 171), DI_ITEM_OFFSETS);
-		
-		Inventory a1 = GetCurrentAmmo();
-		if (a1 != null) DrawString(mHUDFont, FormatNumber(a1.Amount, 3), (44, 171), DI_TEXT_ALIGN_RIGHT|DI_NOSHADOW);
-		DrawString(mHUDFont, FormatNumber(CPlayer.health, 3), (90, 171), DI_TEXT_ALIGN_RIGHT|DI_NOSHADOW);
-		DrawString(mHUDFont, FormatNumber(GetArmorAmount(), 3), (221, 171), DI_TEXT_ALIGN_RIGHT|DI_NOSHADOW);
-
-		DrawBarKeys();
-		DrawBarAmmo();
-		
-		if (deathmatch || teamplay)
+		if (state == HUD_StatusBar || state == HUD_Fullscreen)
 		{
-			DrawString(mHUDFont, FormatNumber(CPlayer.FragCount, 3), (138, 171), DI_TEXT_ALIGN_RIGHT);
+			BeginHUD();
+			DrawFullScreenStuff();
 		}
-		else
-		{
-			DrawBarWeapons();
-		}
-		
-		if (multiplayer)
-		{
-			DrawImage("STFBANY", (143, 168), DI_ITEM_OFFSETS|DI_TRANSLATABLE);
-		}
-		
-		if (CPlayer.mo.InvSel != null && !Level.NoInventoryBar)
-		{
-			DrawInventoryIcon(CPlayer.mo.InvSel, (160, 198), DI_DIMDEPLETED);
-			if (CPlayer.mo.InvSel.Amount > 1)
-			{
-				DrawString(mAmountFont, FormatNumber(CPlayer.mo.InvSel.Amount), (175, 198-mIndexFont.mFont.GetHeight()), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
-			}
-		}
-		else
-		{
-			DrawTexture(GetMugShot(5), (143, 168), DI_ITEM_OFFSETS);
-		}
-		if (isInventoryBarVisible())
-		{
-			DrawInventoryBar(diparms, (48, 169), 7, DI_ITEM_LEFT_TOP);
-		}
-		
-	}
-	
-	protected virtual void DrawBarKeys()
-	{
-		bool locks[6];
-		String image;
-		for(int i = 0; i < 6; i++) locks[i] = CPlayer.mo.CheckKeys(i + 1, false, true);
-		// key 1
-		if (locks[1] && locks[4]) image = "STKEYS6";
-		else if (locks[1]) image = "STKEYS0";
-		else if (locks[4]) image = "STKEYS3";
-		DrawImage(image, (239, 171), DI_ITEM_OFFSETS);
-		// key 2
-		if (locks[2] && locks[5]) image = "STKEYS7";
-		else if (locks[2]) image = "STKEYS1";
-		else if (locks[5]) image = "STKEYS4";
-		else image = "";
-		DrawImage(image, (239, 181), DI_ITEM_OFFSETS);
-		// key 3
-		if (locks[0] && locks[3]) image = "STKEYS8";
-		else if (locks[0]) image = "STKEYS2";
-		else if (locks[3]) image = "STKEYS5";
-		else image = "";
-		DrawImage(image, (239, 191), DI_ITEM_OFFSETS);
-	}
-	
-	protected virtual void DrawBarAmmo()
-	{
-		int amt1, maxamt;
-		[amt1, maxamt] = GetAmount("Clip");
-		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 173), DI_TEXT_ALIGN_RIGHT);
-		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 173), DI_TEXT_ALIGN_RIGHT);
-		
-		[amt1, maxamt] = GetAmount("Shell");
-		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 179), DI_TEXT_ALIGN_RIGHT);
-		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 179), DI_TEXT_ALIGN_RIGHT);
-		
-		[amt1, maxamt] = GetAmount("RocketAmmo");
-		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 185), DI_TEXT_ALIGN_RIGHT);
-		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 185), DI_TEXT_ALIGN_RIGHT);
-		
-		[amt1, maxamt] = GetAmount("Cell");
-		DrawString(mIndexFont, FormatNumber(amt1, 3), (288, 191), DI_TEXT_ALIGN_RIGHT);
-		DrawString(mIndexFont, FormatNumber(maxamt, 3), (314, 191), DI_TEXT_ALIGN_RIGHT);
-	}
-	
-	protected virtual void DrawBarWeapons()
-	{
-		DrawImage("STARMS", (104, 168), DI_ITEM_OFFSETS);
-		DrawImage(CPlayer.HasWeaponsInSlot(2)? "STYSNUM2" : "STGNUM2", (111, 172), DI_ITEM_OFFSETS);
-		DrawImage(CPlayer.HasWeaponsInSlot(3)? "STYSNUM3" : "STGNUM3", (123, 172), DI_ITEM_OFFSETS);
-		DrawImage(CPlayer.HasWeaponsInSlot(4)? "STYSNUM4" : "STGNUM4", (135, 172), DI_ITEM_OFFSETS);
-		DrawImage(CPlayer.HasWeaponsInSlot(5)? "STYSNUM5" : "STGNUM5", (111, 182), DI_ITEM_OFFSETS);
-		DrawImage(CPlayer.HasWeaponsInSlot(6)? "STYSNUM6" : "STGNUM6", (123, 182), DI_ITEM_OFFSETS);
-		DrawImage(CPlayer.HasWeaponsInSlot(7)? "STYSNUM7" : "STGNUM7", (135, 182), DI_ITEM_OFFSETS);
 	}
 
 	protected void DrawFullScreenStuff ()
@@ -136,49 +35,54 @@ class GSW_HUD : BaseStatusBar
 		// Draw health
 		let berserk = CPlayer.mo.FindInventory("GSW_PowerStrength");
 		DrawImage(berserk? "PZRKA0" : "IHELG0", (20, -2));
-		DrawString(mHUDFont, FormatNumber(CPlayer.health, 3), (44, -20));
+		DrawString(mBigFont, FormatNumber(CPlayer.health, 3), (44, -24));
 		
 		let armor = CPlayer.mo.FindInventory("BasicArmor", true);
 		if (armor != null && armor.Amount > 0)
 		{
 			DrawInventoryIcon(armor, (20, -22));
-			DrawString(mHUDFont, FormatNumber(armor.Amount, 3), (44, -40));
+			DrawString(mSmallFont, FormatNumber(armor.Amount, 3), (44, -40));
 		}
+		// Draw ammo
 		Inventory ammotype1, ammotype2;
 		[ammotype1, ammotype2] = GetCurrentAmmo();
-		int invY = -20;
+		int invY = -24;
 		if (ammotype1 != null)
 		{
 			DrawInventoryIcon(ammotype1, (-14, -4));
-			DrawString(mHUDFont, FormatNumber(ammotype1.Amount, 3), (-30, -20), DI_TEXT_ALIGN_RIGHT);
-			invY -= 20;
+			DrawString(mBigFont, FormatNumber(ammotype1.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
+			invY -= 24;
 		}
 		if (ammotype2 != null && ammotype2 != ammotype1)
 		{
-			DrawInventoryIcon(ammotype2, (-14, invY + 17));
-			DrawString(mHUDFont, FormatNumber(ammotype2.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
-			invY -= 20;
+			DrawInventoryIcon(ammotype2, (-14, invY + 20));
+			DrawString(mBigFont, FormatNumber(ammotype2.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
+			invY -= 12;
 		}
+		// Draw sticky bombs
 		let stickies = CPlayer.mo.FindInventory("GSW_StickyAmmo", true);
 		if (stickies != null)
 		{
-			DrawInventoryIcon(stickies, (-70, 20));
-			DrawString(mHUDFont, FormatNumber(stickies.Amount, 3), (-20, 4), DI_TEXT_ALIGN_RIGHT);
+			DrawInventoryIcon(stickies, (-14, invY+12));
+			DrawString(mSmallFont, FormatNumber(stickies.Amount, 3), (-36, invY), DI_TEXT_ALIGN_CENTER);
 		}
+		// Draw inventory item
 		if (!isInventoryBarVisible() && !Level.NoInventoryBar && CPlayer.mo.InvSel != null)
 		{
 			DrawInventoryIcon(CPlayer.mo.InvSel, (-14, invY + 17), DI_DIMDEPLETED);
-			DrawString(mHUDFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
+			DrawString(mBigFont, FormatNumber(CPlayer.mo.InvSel.Amount, 3), (-30, invY), DI_TEXT_ALIGN_RIGHT);
 		}
+		// Draw frag count
 		if (deathmatch)
 		{
-			DrawString(mHUDFont, FormatNumber(CPlayer.FragCount, 3), (-3, 1), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
+			DrawString(mBigFont, FormatNumber(CPlayer.FragCount, 3), (-3, 1), DI_TEXT_ALIGN_RIGHT, Font.CR_GOLD);
 		}
+		// Draw keys
 		else
 		{
 			DrawFullscreenKeys();
 		}
-		
+		// Draw inventory bar
 		if (isInventoryBarVisible())
 		{
 			DrawInventoryBar(diparms, (0, 0), 7, DI_SCREEN_CENTER_BOTTOM, HX_SHADOW);
