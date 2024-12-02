@@ -5,7 +5,7 @@ class GSW_SmallSuitBattery : BasicArmorBonus replaces ArmorBonus
 		Radius 20;
 		Height 16;
 		Inventory.Pickupmessage "$GOTSMALLBATTERY";
-		Inventory.Icon "IARMF0";
+		Inventory.Icon "IARMM0";
 		Armor.Savepercent 50;
 		Armor.Saveamount 1;
 		Armor.Maxsaveamount 400;
@@ -29,8 +29,8 @@ class GSW_MediumSuitBattery : GSW_SmallSuitBattery replaces GreenArmor
 	States
 	{
 		Spawn:
-			IARM E -1 Bright;
-			Stop;
+			IARM EFGHHHGF 2 Bright;
+			Loop;
 	}
 }
 class GSW_LargeSuitBattery : GSW_SmallSuitBattery replaces BlueArmor
@@ -43,7 +43,7 @@ class GSW_LargeSuitBattery : GSW_SmallSuitBattery replaces BlueArmor
 	States
 	{
 		Spawn:
-			IARM F -1 Bright;
-			Stop;
+			IARM IJKLLLKJ 2 Bright;
+			Loop;
 	}
 }
