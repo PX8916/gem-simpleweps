@@ -1,0 +1,16 @@
+class GSW_ClipRandom : RandomSpawner replaces Clip
+{
+	Default
+	{
+		DropItem "GSW_SMGBattery", 255, 3;
+		DropItem "GSW_RevolverSpeedloader", 255, 1;
+	}
+}
+class GSW_ClipBoxRandom : RandomSpawner replaces ClipBox
+{
+	Default
+	{
+		DropItem "GSW_SMGBatteryPack", 255, 3;
+		DropItem "GSW_RevolverBulletBox", 255, 1;
+	}
+}

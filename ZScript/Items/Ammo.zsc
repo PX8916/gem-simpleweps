@@ -1,4 +1,4 @@
-class GSW_SMGBattery : Ammo replaces Clip
+class GSW_SMGBattery : Ammo
 {
 	Default
 	{
@@ -17,7 +17,7 @@ class GSW_SMGBattery : Ammo replaces Clip
 			Stop;
 	}
 }
-class GSW_SMGBatteryPack : GSW_SMGBattery replaces ClipBox
+class GSW_SMGBatteryPack : GSW_SMGBattery
 {
 	Default
 	{
@@ -28,6 +28,40 @@ class GSW_SMGBatteryPack : GSW_SMGBattery replaces ClipBox
 	{
 		Spawn:
 			IBAT B -1;
+			Stop;
+	}
+}
+
+class GSW_RevolverSpeedloader : Ammo
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTREVOLVERSPEEDLOADER";
+		Inventory.Amount 6;
+		Inventory.MaxAmount 100;
+		Ammo.BackpackAmount 6;
+		Ammo.BackpackMaxAmount 200;
+		Inventory.Icon "IRVLA0";
+		Tag "$AMMO_REVOLVERBULLETS";
+	}
+	States
+	{
+		Spawn:
+			IRVL A -1;
+			Stop;
+	}
+}
+class GSW_RevolverBulletBox : GSW_RevolverSpeedloader
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTREVOLVERBULLETBOX";
+		Inventory.Amount 30;
+	}
+	States
+	{
+		Spawn:
+			IRVL B -1;
 			Stop;
 	}
 }

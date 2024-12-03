@@ -10,3 +10,12 @@ weapons/glock/slideback		"Sounds/Weapons/2 - Glock/glock_slideback.wav"
 weapons/glock/sliderelease	"Sounds/Weapons/2 - Glock/glock_sliderelease.wav"
 
 $random weapons/glock/fire	{ weapons/glock/fire1 weapons/glock/fire2 }
+
+// Revolver //
+weapons/revolver/fire		"Sounds/Weapons/2 - Revolver/revolver-1_01.wav"
+weapons/revolver/clipin		"Sounds/Weapons/2 - Revolver/revolver_clipin.wav"
+weapons/revolver/clipout	"Sounds/Weapons/2 - Revolver/revolver_clipout.wav"
+weapons/revolver/draw		"Sounds/Weapons/2 - Revolver/revolver_draw.wav"
+weapons/revolver/hammer		"Sounds/Weapons/2 - Revolver/revolver_hammer.wav"
+weapons/revolver/open		"Sounds/Weapons/2 - Revolver/revolver_slideback.wav"
+weapons/revolver/close		"Sounds/Weapons/2 - Revolver/revolver_sliderelease.wav"

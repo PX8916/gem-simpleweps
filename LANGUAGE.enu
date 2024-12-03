@@ -9,6 +9,7 @@ FONTTEST = "The quick brown fox jumps over the lazy dog.\nTHE QUICK BROWN FOX JU
 // No Knife pickup message, since you start with it.
 // Slot 2 //
 GOTGLOCK = "\c[White]You picked up the \c[Black]Glock 17\c[White]! (Slot 2, tap to fire faster)";
+GOTREVOLVER = "\c[White]You picked up the \c[DarkGray]Revolver\c[White]! (Slot 2)";
 // Slot 3 //
 GOTPUMMELER = "\c[White]You picked up the \c[DarkGray]\"Pummeler\" Pump Shotgun\c[White]! (Slot 3)";
 GOTPUMMELERSLUG = "\c[White]Collected the \c[Green]Slug Chip\c[White] for the \c[DarkGray]Pummeler\c[White].";
@@ -34,6 +35,7 @@ GOTSTICKYLAUNCHER = "\c[White]You picked up the \c[Olive]shoulder-mounted sticky
 KILLKNIFE = "%o was given the ol' swish-swish-stab by %k's \c[Brown]Knife\c[Gold].";
 // Slot 2 //
 KILLGLOCK = "%o was plinked by %k's \c[Black]Glock\c[Gold].";
+KILLREVOLVER = "%o met %k's \c[DarkGray]defense attorney from Smith & Wesson\c[Gold].";
 // Slot 3 //
 KILLPUMMELER = "%o was clobbered by %k's \c[DarkGray]Pummeler\c[Gold].";
 KILLPUMMELERPOISON = "%o took a lethal dose of %k's \c[Purple]Poison Chip\c[Gold]-enhanced \c[DarkGray]Pummeler\c[Gold].";
@@ -58,6 +60,7 @@ KILLSTICKYLAUNCHER = "%o couldn't quite get %k's \c[Olive]sticky bomb\c[Gold] of
 TAG_KNIFE = "Knife";
 // Slot 2 //
 TAG_GLOCK = "Glock 17";
+TAG_REVOLVER = "Revolver";
 // Slot 3 //
 TAG_PUMMELER = "\"Pummeler\" Shotgun";
 // Slot 4 //
@@ -75,6 +78,8 @@ TAG_SHOCKSMG = "Shock SMG";
 // ======================== //
 GOTSMGBATTERY = "\c[White]Picked up an \c[Brick]SMG battery\c[White].";
 GOTSMGBATTERYPACK = "\c[White]Picked up a \c[Brick]pack of SMG batteries\c[White].";
+GOTREVOLVERSPEEDLOADER = "\c[White]Picked up a \c[Gold]speedloader\c[White].";
+GOTREVOLVERBULLETBOX = "\c[White]Picked up a \c[Gold]box of bullets\c[White].";
 GOTSHELLBOXSMALL = "\c[White]Picked up a \c[Red]small box of shotgun shells\c[White].";
 GOTSHELLBOXMEDIUM = "\c[White]Picked up a \c[Red]medium box of shotgun shells\c[White].";
 GOTSHELLBOXLARGE = "\c[White]Picked up a \c[Red]large box of shotgun shells\c[White].";
@@ -105,4 +110,5 @@ GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)"; // so
 //         Ammo tags        //
 // ======================== //
 AMMO_SMGBATTERIES = "SMG Batteries";
+AMMO_REVOLVERBULLETS = "Revolver Bullets";
 AMMO_STICKYBOMBS = "Sticky Bombs";

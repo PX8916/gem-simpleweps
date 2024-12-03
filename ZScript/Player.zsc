@@ -4,10 +4,17 @@ class GSW_Player : DoomPlayer
 	{
 		Player.StartItem "GSW_Glock";
 		Player.StartItem "GSW_GlockAmmo", 18;
+		Player.StartItem "GSW_RevolverAmmo", 6;
 		Player.StartItem "GSW_PummelerAmmo", 9;
 		Player.StartItem "GSW_ShockSMGAmmo", 60;
 		Player.StartItem "GSW_Fist";
-//		Player.StartItem "GSW_ShoulderStickyLauncher";
+		Player.WeaponSlot 1, "GSW_Fist";
+		Player.WeaponSlot 2, "GSW_Glock", "GSW_Revolver";
+		Player.WeaponSlot 3, "GSW_Pummeler";
+		Player.WeaponSlot 4, "GSW_ShockSMG";
+//		Player.WeaponSlot 5, "RocketLauncher";
+//		Player.WeaponSlot 6, "PlasmaRifle";
+//		Player.WeaponSlot 7, "BFG9000";
 		Player.AttackZOffset 11;
 	}
 }

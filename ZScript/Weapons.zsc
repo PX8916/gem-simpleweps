@@ -5,6 +5,7 @@
 #include "./Weapons/1 - Knife.zsc"
 // Slot 2 //
 #include "./Weapons/2 - Glock.zsc"
+#include "./Weapons/2 - Revolver.zsc"
 // Slot 3 //
 #include "./Weapons/3 - Pummeler.zsc"
 // Slot 4 //

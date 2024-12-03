@@ -1,0 +1,92 @@
+// Revolver
+// Requires reloading, deals enough damage to one-hit a Chaingunner.
+// HE shots? Detonate with altfire? Who knows... Look at R667 Pipebombs for that, though.
+class GSW_RevolverAmmo : Ammo
+{
+	Default
+	{
+		Inventory.Icon "RVLGZ0";
+		Inventory.Amount 0;
+		Inventory.MaxAmount 6;
+		Ammo.BackpackAmount 0;
+		Ammo.BackpackMaxAmount 6;
+		+INVENTORY.IGNORESKILL
+	}
+}
+class GSW_Revolver : GSW_Weapon replaces Chainsaw
+{
+	Default
+	{
+		+WEAPON.AMMO_OPTIONAL
+		Weapon.SlotNumber 2;
+		Weapon.AmmoType1 "GSW_RevolverAmmo";
+		Weapon.AmmoUse1 1;
+		Weapon.AmmoGive1 0;
+		Weapon.AmmoType2 "GSW_RevolverSpeedloader";
+		Weapon.AmmoUse2 0;
+		Weapon.AmmoGive2 6;
+
+		Tag "$TAG_REVOLVER";
+		Obituary "$KILLREVOLVER";
+		Inventory.PickupMessage "$GOTREVOLVER";
+
+		AttackSound "weapons/revolver/fire";
+		Weapon.UpSound "weapons/revolver/draw";
+
+		DamageType "Bullet";
+	}
+	States
+	{
+		Spawn:
+			RVLG Z -1;
+			Stop;
+		Select:
+			RVLG A 1 A_Raise(18);
+			Loop;
+		Deselect:
+			RVLG A 1 A_Lower(18);
+			Loop;
+		Ready:
+			RVLG A 1 A_WeaponReady(WRF_ALLOWRELOAD);
+			Loop;
+		Fire:
+			RVLG B 2 A_StartSound("weapons/revolver/hammer");
+			RVLG A 0 A_JumpIfNoAmmo("FireEmpty"); // kind of just a safeguard
+			RVLG A 2 {
+				A_FireBullets(3, 3, -1, 70, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -0.5, 7.5); // -1 bullets to always fire with spread
+				A_Overlay(-2, "Flash");
+			}
+			RVLG CD 1;
+			RVLG E 6;
+			RVLG FFFFGGGHHIJA 1;
+			Goto Ready;
+		FireEmpty:
+			RVLG A 2;
+			RVLG A 8;
+			TNT1 A 0 A_JumpIfInventory("GSW_RevolverSpeedloader", 1, "Reload");
+			Goto Ready;
+		Reload:
+			TNT1 A 0 A_JumpIfInventory("GSW_RevolverAmmo", 0, "Ready");
+			TNT1 A 0 A_JumpIfInventory("GSW_RevolverSpeedloader", 1, 1);
+			Goto Ready;
+			RVLG CDEEE 3;
+			RVLG DCAAAA 1;
+		Reload.Repeat:
+			// if full on ammo, finish reload
+			TNT1 A 0 A_JumpIfInventory("GSW_RevolverAmmo", 0, "Reload.Finish");
+			TNT1 A 0 A_JumpIfInventory("GSW_RevolverSpeedloader", 1, 1);
+			Goto Reload.Finish;
+			TNT1 A 0 {
+				A_GiveInventory("GSW_RevolverAmmo", 1);
+				A_Takeinventory("GSW_RevolverSpeedloader",1);
+			}
+			Goto Reload.Repeat;
+		Reload.Finish:
+			Goto Ready;
+		Flash:
+			RVLF A 1 Bright A_AttachLightDef("Flash", "GSW_GunFlash");
+			RVLF B 1 Bright;
+			RVLF B 0 A_RemoveLight("Flash");
+			Stop;
+	}
+}
