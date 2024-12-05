@@ -5,7 +5,7 @@ class GSW_SawedOffShotgunAmmo : Ammo
 {
 	Default
 	{
-		Inventory.Icon "SOSG[0";
+		Inventory.Icon "SOSGY0";
 		Inventory.Amount 0;
 		Inventory.MaxAmount 2;
 		Ammo.BackpackAmount 0;
