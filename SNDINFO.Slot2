@@ -17,5 +17,7 @@ weapons/revolver/clipin		"Sounds/Weapons/2 - Revolver/revolver_clipin.wav"
 weapons/revolver/clipout	"Sounds/Weapons/2 - Revolver/revolver_clipout.wav"
 weapons/revolver/draw		"Sounds/Weapons/2 - Revolver/revolver_draw.wav"
 weapons/revolver/hammer		"Sounds/Weapons/2 - Revolver/revolver_hammer.wav"
-weapons/revolver/open		"Sounds/Weapons/2 - Revolver/revolver_slideback.wav"
-weapons/revolver/close		"Sounds/Weapons/2 - Revolver/revolver_sliderelease.wav"
+weapons/revolver/open		"Sounds/Weapons/2 - Revolver/revolver_sideback.wav"
+weapons/revolver/close		"Sounds/Weapons/2 - Revolver/revolver_siderelease.wav"
+
+$alias weapons/revolver/pickup	weapons/revolver/close

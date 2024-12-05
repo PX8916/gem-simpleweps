@@ -8,6 +8,7 @@
 #include "./Weapons/2 - Revolver.zsc"
 // Slot 3 //
 #include "./Weapons/3 - Pummeler.zsc"
+#include "./Weapons/3 - Sawed-Off Shotgun.zsc"
 // Slot 4 //
 #include "./Weapons/4 - Shock SMG.zsc"
 // Slot 5 //
@@ -66,6 +67,15 @@ class GSW_BulletTracer : _ZTracer
 	States
 	{
 		Death:
+			Stop;
+	}
+}
+
+class GSW_NullPuff : Actor
+{
+	States
+	{
+		Spawn:
 			Stop;
 	}
 }

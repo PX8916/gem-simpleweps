@@ -2,6 +2,8 @@
 ## Weapons
 ### Glock 17
 cybermonday
+### Revolver
+Captain J
 ### "Pummeler" Shotgun
 crozi4032 ("Chunky Shooshgun")
 Monolith Interactive (Blood)
@@ -10,6 +12,9 @@ dzierdan
 fgsfds
 SoniK.O.Fan/Tesefy (Brutal Doom)
 Mengo329 (Poison Cloud from Bass Game)
+### Unnamed Sawed-Off
+willkuer
+Wocht11K (shells)
 ### MMG First-Try Shock SMG
 Captain J
 Sgt. Shivers (original reload animation, slightly edited)
@@ -23,25 +28,31 @@ Mace
 Potetobloke
 
 ## Items
-### Shell boxes, green and blue armor, mini-stimpack, stimpack, medkit, Berserk pack
+### Shell boxes, suit batteries, mini-stimpack, stimpack, medkit, Berserk pack
 Zrrion the Insect
-### SMG battery
+### SMG battery, Revolver ammo
 Captain J
 
 ## Other
 ### Font
 Rune B/rubjo (Victor Mono)
+### Status face
+Skelegant (One Hell of a Marine, KickassGuy flavor)
 
 # Sounds
 ## Weapons
 ### Glock 17
 Crowbar Collective (Black Mesa)
 Valve Software (Counter-Strike: Global Offensive)
+### Revolver
+Valve Software (Counter-Strike: Global Offensive)
 ### "Pummeler" Shotgun
 Treyarch (Call of Duty: World at War) (fire)
 Crowbar Collective (Black Mesa) (pump)
 Tripwire Interactive (Killing Floor) (draw, pickup, load)
 TS_SOUND (fire slug)
+### Unnamed Sawed-Off
+Treyarch (Call of Duty: World at War)
 ### MMG First-Try Shock SMG
 Raven Software (Quake 4)
 ### Shoulder-mounted Stickybomb Launcher
@@ -68,6 +79,7 @@ Mikk0451 (Brutal Doom Platinum)
 Tango (Supercharge)
 ### Immense help making ZTracers recolorable
 themistercat
+### Suggestion to use A_FireProjectile for Sawed-Off shot
 
 # Other
 ### The push to start working on this, and the hand sheet used (despite it being a recolor of standard Doom hands)

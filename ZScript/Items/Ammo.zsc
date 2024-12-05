@@ -141,3 +141,6 @@ class GSW_StickyBox : GSW_StickyAmmo replaces RocketBox
 			Stop;
 	}
 }
+
+class GSW_Backpack : Backpack
+{}

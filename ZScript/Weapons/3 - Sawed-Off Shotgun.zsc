@@ -1,0 +1,144 @@
+// Sawed-Off Shotgun
+// Two shells. Twice the Pummeler...?
+// Two shells.
+class GSW_SawedOffShotgunAmmo : Ammo
+{
+	Default
+	{
+		Inventory.Icon "SOSG[0";
+		Inventory.Amount 0;
+		Inventory.MaxAmount 2;
+		Ammo.BackpackAmount 0;
+		Ammo.BackpackMaxAmount 2;
+		+INVENTORY.IGNORESKILL
+	}
+}
+class GSW_SawedOffShotgun : GSW_Weapon replaces SuperShotgun
+{
+	Default
+	{
+		+WEAPON.AMMO_OPTIONAL
+		Weapon.SlotNumber 3;
+		Weapon.AmmoType1 "GSW_SawedOffShotgunAmmo";
+		Weapon.AmmoUse1 2;
+		Weapon.AmmoGive1 0;
+		Weapon.AmmoType2 "Shell";
+		Weapon.AmmoUse2 0;
+		Weapon.AmmoGive2 4;
+
+		Tag "$TAG_SAWEDOFFSHOTGUN";
+		//Obituary "$KILLSAWEDOFFSHOTGUN"; // Not applicable since it's a projectile weapon
+		Inventory.PickupMessage "$GOTSAWEDOFFSHOTGUN";
+
+		//AttackSound "weapons/sawedoff/fire"; // It uses a projectile.
+		Weapon.UpSound "weapons/sawedoff/draw";
+		//Inventory.PickupSound "";
+
+		DamageType "Shotgun";
+	}
+	States
+	{
+		Spawn:
+			SOSG Z -1;
+			Stop;
+		Select:
+			SOSG A 1 A_Raise(18);
+			Loop;
+		Deselect:
+			SOSG A 1 A_Lower(18);
+			Loop;
+		Ready:
+			SOSG A 1 A_WeaponReady(WRF_ALLOWRELOAD);
+			Loop;
+		Fire:
+			TNT1 A 0 A_JumpIfNoAmmo("Reload"); // kind of just a safeguard
+			SOSG B 2 {
+				LineAttack(self.angle, PLAYERMISSILERANGE, self.pitch, 0, 'Hitscan', "GSW_NullPuff", LAF_NORANDOMPUFFZ|LAF_NOIMPACTDECAL); // sneaky lil line attack to hit switches
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), true, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
+				A_StartSound("weapons/sawedoff/fire");
+				//A_FireBullets(8, 4, 20, 0, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_SawedOffShotgunTracer", -2.5, 7.5); // -1 bullets to always fire with spread
+				A_Overlay(-2, "Flash");
+			}
+			SOSG CDE 2;
+			SOSG A 8;
+			TNT1 A 0 A_JumpIfNoAmmo("Reload"); // kind of just a safeguard
+			Goto Ready;
+		Reload:
+			TNT1 A 0 A_JumpIfInventory("GSW_SawedOffShotgunAmmo", 0, "Ready");
+			TNT1 A 0 A_JumpIfInventory("Shell", 2, 1);
+			Goto Ready;
+			SOSG FGH 2;
+			SOSG I 1;
+			SOSG J 1 A_StartSound("weapons/sawedoff/break");
+			SOSG KL 1;
+			SOSG M 1;//A_StartSound("weapons/sawedoff/shake");
+			SOSG NOPQR 1;
+		Reload.Repeat:
+			// if full on ammo, finish reload
+			TNT1 A 0 A_JumpIfInventory("GSW_SawedOffShotgunAmmo", 0, "Reload.Finish");
+			// if at least 2 shells to load, continue
+			TNT1 A 0 A_JumpIfInventory("Shell", 2, 1);
+			Goto Reload.Finish;
+			SOSG RSTU 2;
+			// go up and put it in
+			TNT1 A 0 {
+				A_GiveInventory("GSW_SawedOffShotgunAmmo", 2);
+				A_Takeinventory("Shell",2);
+				A_StartSound("weapons/sawedoff/load");
+			}
+			// go down
+			SOSG VWXR 2;
+			Goto Reload.Repeat;
+		Reload.Finish:
+			SOSG RLKJ 2;
+			SOSG I 2 A_StartSound("weapons/sawedoff/close");
+			SOSG HGF 2;
+			SOSG A 8;
+			Goto Ready;
+		Flash:
+			TNT1 A 2 A_AttachLightDef("Flash", "GSW_GunFlash");
+			PUMF B 0 A_RemoveLight("Flash");
+			Stop;
+	}
+}
+class GSW_SawedOffShotgunTracer : GSW_BulletTracer
+{
+	Default
+	{
+		DamageFunction (15);
+		+EXTREMEDEATH
+		Obituary "$KILLSAWEDOFFSHOTGUN"; // just in case
+	}
+	States
+	{
+		Spawn:
+			TNT1 A 2;
+			TNT1 A 0 {bEXTREMEDEATH = false;}
+			Goto Expired;
+		Expired:
+			TNT1 A 1;
+			Loop;
+		Death:
+			TNT1 A 0 A_SpawnItemEx("BulletPuff");
+			Goto XDeath;
+	}
+}

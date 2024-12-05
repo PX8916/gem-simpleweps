@@ -31,6 +31,8 @@ class GSW_HUD : BaseStatusBar
 
 	protected void DrawFullScreenStuff ()
 	{
+		// Mugshot
+		DrawTexture(GetMugShot(5), (0, -4), DI_SCREEN_CENTER_BOTTOM);
 		Vector2 iconbox = (40, 20);
 		// Draw health
 		let berserk = CPlayer.mo.FindInventory("GSW_PowerStrength");

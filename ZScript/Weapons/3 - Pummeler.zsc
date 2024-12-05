@@ -1,14 +1,13 @@
 // "Pummeler" Pump Shotgun
 // A high-power shotgun.
 // Holds 8 shots in the mag, and one more in the chamber. Reflect this in the reload from empty!
-// First, though, define a spawner for those upgrades that replaces the Super Shotgun.
-class GSW_PummelerRandom : RandomSpawner replaces SuperShotgun
+// First, though, define a spawner for those upgrades that replaces the Backpack.
+class GSW_PummelerRandom : RandomSpawner replaces Backpack
 {
 	override void BeginPlay()
 	{
 		Super.BeginPlay();
-		A_SpawnItemEx("GSW_MediumShellBox", random(-6, 6), random(-6, 6));
-		A_SpawnItemEx("GSW_Pummeler");
+		A_SpawnItemEx("GSW_Backpack");
 	}
 	Default
 	{
@@ -17,15 +16,28 @@ class GSW_PummelerRandom : RandomSpawner replaces SuperShotgun
 		DropItem "GSW_PummelerFrag";
 	}
 }
-class GSW_PummelerSlug : Inventory
+class GSW_PummelerChip : Inventory
 {
 	Default
 	{
-		+FLOATBOB
-		Inventory.PickupMessage "$GOTPUMMELERSLUG";
+		Height 48;
+		+FLOATBOB;
 		Inventory.Amount 1;
 		Inventory.MaxAmount 1;
 		+INVENTORY.IGNORESKILL
+	}
+	States
+	{
+		Spawn:
+			IPUM ABCDEFGGFEDCB 2;
+			Loop;
+	}
+}
+class GSW_PummelerSlug : GSW_PummelerChip
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOTPUMMELERSLUG";
 	}
 	States
 	{
@@ -34,15 +46,11 @@ class GSW_PummelerSlug : Inventory
 			Loop;
 	}
 }
-class GSW_PummelerPoison : Inventory
+class GSW_PummelerPoison : GSW_PummelerChip
 {
 	Default
 	{
-		+FLOATBOB
 		Inventory.PickupMessage "$GOTPUMMELERPOISON";
-		Inventory.Amount 1;
-		Inventory.MaxAmount 1;
-		+INVENTORY.IGNORESKILL
 	}
 	States
 	{
@@ -51,15 +59,11 @@ class GSW_PummelerPoison : Inventory
 			Loop;
 	}
 }
-class GSW_PummelerFrag : Inventory
+class GSW_PummelerFrag : GSW_PummelerChip
 {
 	Default
 	{
-		+FLOATBOB
 		Inventory.PickupMessage "$GOTPUMMELERFRAG";
-		Inventory.Amount 1;
-		Inventory.MaxAmount 1;
-		+INVENTORY.IGNORESKILL
 	}
 	States
 	{
