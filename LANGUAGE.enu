@@ -20,7 +20,9 @@ GOTSAWEDOFFSHOTGUN = "\c[White]Picked up the \c[DarkGray]Sawed-Off Shotgun\c[Whi
 GOTSHOCKSMG = "\c[White]Picked up the \c[LightBlue]Shock SMG\c[White]! (Slot 4)";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
+GOTHEAVYRIFLE = "\c[White]Picked up the \c[Brown]Heavy Rifle\c[White]! (Slot 5)";
 // Slot 6 //
+GOTHEAVYMINIGUN = "\c[White]Picked up the \c[Brown]Heavy Minigun\c[White]! (Slot 6)";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
@@ -46,7 +48,9 @@ KILLSAWEDOFFSHOTGUN = "%o was splattered by %k's \c[DarkGray]Sawed-Off Shotgun\c
 KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
+KILLHEAVYRIFLE = "%o couldn't bear the weight of %k's \c[Brown]Heavy Rifle\c[Gold].";
 // Slot 6 //
+KILLHEAVYMINIGUN = "%o was crushed by %k's \c[Brown]Heavy Minigun\c[Gold] with a loud, loud \c[Red]crunch\c[Gold].";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
