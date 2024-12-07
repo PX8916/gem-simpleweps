@@ -1,0 +1,87 @@
+// Axe
+// It's an axe. Chop chop.
+// Just a copy of the Pickaxe from ZandroMod...
+class GSW_Axe : GSW_Weapon replaces Fist
+{
+	Default
+	{
+		+WEAPON.MELEEWEAPON
+		+INVENTORY.UNDROPPABLE
+		+WEAPON.AXEBLOOD
+		Weapon.SlotNumber 1;
+		Inventory.Icon "AXEWZ0";
+
+		Tag "$TAG_AXE";
+		Obituary "$KILLAXE"; // Is it possible to make a new obituary for a puff? If so, have a "cut in half" one for Berserk. Maybe even add the unused "cut in half" death to the player?
+		// No pickup message.
+
+		Weapon.UpSound "weapons/axe/draw";
+
+		Decal "BulletChip";
+		DamageType "Saw";
+	}
+	States
+	{
+		Ready:
+			AXEW A 1 A_WeaponReady;
+			Loop;
+		Deselect:
+			AXEW A 1 A_Lower(18);
+			Loop;
+		Select:
+			AXEW A 1 A_Raise(18);
+			Loop;
+		Fire:
+			AXEW BCDE 1;
+			TNT1 A 4;
+		Hold:
+			TNT1 A 0 A_JumpIfInventory("GSW_PowerStrength", 1, "Hold.Berserk");
+			AXEW FGHI 2;
+			AXEW JKLM 1;
+			AXEW MMMMMNOP 1;
+			TNT1 A 0 A_PlaySound("weapons/axe/swing");
+			AXEW Q 2 A_CustomPunch(30, true, 0, "GSW_AxePuff");
+			TNT1 A 10;
+			TNT1 A 0 A_ReFire;
+			TNT1 A 3;
+			AXEW EDCB 2;
+			Goto Ready;
+		Hold.Berserk:
+			AXEW FGHI 1;
+			AXEW JKLM 1;
+			AXEW MMNOP 1;
+			TNT1 A 0 A_PlaySound("weapons/axe/swing");
+			AXEW Q 2 A_CustomPunch(300, true, 0, "GSW_AxePuff");
+			TNT1 A 8;
+			TNT1 A 0 A_ReFire("Hold.Berserk");
+			TNT1 A 3;
+			AXEW EDCB 2;
+			Goto Ready;
+	}
+}
+class GSW_AxePuff : Actor
+{
+	Default
+	{
+		+NOBLOCKMAP
+		+NOGRAVITY
+		-ALLOWPARTICLES
+		-RANDOMIZE
+		+FORCEPAIN
+		+PUFFONACTORS
+		RenderStyle "Translucent";
+		Alpha 0.5;
+		VSpeed 1;
+		Mass 5;
+	}
+	States
+	{
+		Melee:
+			PUFF A 4 Bright A_PlaySound("weapons/axe/hit", CHAN_6);
+			PUFF BCD 4;
+			Stop;
+		XDeath:
+			TNT1 A 0 A_PlaySound("weapons/axe/bleed", CHAN_6);
+			Stop;
+	}
+}

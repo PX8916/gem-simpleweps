@@ -1,0 +1,11 @@
+// Axe //
+weapons/axe/swing1			"Sounds/Weapons/1 - Axe/swing1.mp3"
+weapons/axe/swing2			"Sounds/Weapons/1 - Axe/swing2.mp3"
+weapons/axe/hit1			"Sounds/Weapons/1 - Axe/hit1.mp3"
+weapons/axe/hit2			"Sounds/Weapons/1 - Axe/hit2.mp3"
+weapons/axe/bleed1			"Sounds/Weapons/1 - Axe/bleed1.mp3"
+weapons/axe/bleed2			"Sounds/Weapons/1 - Axe/bleed2.mp3"
+
+$random weapons/axe/swing	{ weapons/axe/swing1 weapons/axe/swing2 }
+$random weapons/axe/hit		{ weapons/axe/hit1 weapons/axe/hit2 }
+$random weapons/axe/bleed	{ weapons/axe/bleed1 weapons/axe/bleed2 }

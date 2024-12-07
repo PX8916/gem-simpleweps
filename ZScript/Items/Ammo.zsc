@@ -142,5 +142,39 @@ class GSW_StickyBox : GSW_StickyAmmo replaces RocketBox
 	}
 }
 
+class GSW_20mmMag : Ammo replaces Cell
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOT20MMMAG";
+		Inventory.Amount 20;
+		Inventory.MaxAmount 300;
+		Ammo.BackpackAmount 20;
+		Ammo.BackpackMaxAmount 600;
+		Inventory.Icon "I20MA0";
+		Tag "$AMMO_20MM";
+	}
+	States
+	{
+		Spawn:
+			I20M A -1;
+			Stop;
+	}
+}
+class GSW_20mmBox : GSW_20mmMag replaces CellPack
+{
+	Default
+	{
+		Inventory.PickupMessage "$GOT20MMBOX";
+		Inventory.Amount 100;
+	}
+	States
+	{
+		Spawn:
+			I20M B -1;
+			Stop;
+	}
+}
+
 class GSW_Backpack : Backpack
 {}

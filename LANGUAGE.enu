@@ -6,7 +6,7 @@ FONTTEST = "The quick brown fox jumps over the lazy dog.\nTHE QUICK BROWN FOX JU
 //  Weapon pickup messages  //
 // ======================== //
 // Slot 1 //
-// No Knife pickup message, since you start with it.
+// No Axe pickup message, since you start with it.
 // Slot 2 //
 GOTGLOCK = "\c[White]Picked up the \c[Black]Glock 17\c[White]! (Slot 2, tap to fire faster)";
 GOTREVOLVER = "\c[White]Picked up the \c[DarkGray]Revolver\c[White]! (Slot 2)";
@@ -35,7 +35,7 @@ GOTSTICKYLAUNCHER = "\c[White]Picked up the \c[Olive]shoulder-mounted stickybomb
 // Weapon obituary messages //
 // ======================== //
 // Slot 1 //
-KILLKNIFE = "%o was given the ol' swish-swish-stab by %k's \c[Brown]Knife\c[Gold].";
+KILLAXE = "%o was chopped in half by %k's \c[Gray]axe\c[Gold].";
 // Slot 2 //
 KILLGLOCK = "%o was plinked by %k's \c[Black]Glock\c[Gold].";
 KILLREVOLVER = "%o met %k's \c[DarkGray]defense attorney from Smith & Wesson\c[Gold].";
@@ -50,7 +50,7 @@ KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 KILLHEAVYRIFLE = "%o couldn't bear the weight of %k's \c[Brown]Heavy Rifle\c[Gold].";
 // Slot 6 //
-KILLHEAVYMINIGUN = "%o was crushed by %k's \c[Brown]Heavy Minigun\c[Gold] with a loud, loud \c[Red]crunch\c[Gold].";
+KILLHEAVYMINIGUN = "%o was crushed by %k's \c[Brown]Heavy Minigun\c[Gold] with a loud, loud \c[Red]crunch\c[Gold]!";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
@@ -63,7 +63,7 @@ KILLSTICKYLAUNCHER = "%o couldn't quite get %k's \c[Olive]sticky bomb\c[Gold] of
 //       Weapon names       //
 // ======================== //
 // Slot 1 //
-TAG_KNIFE = "Knife";
+TAG_AXE = "Axe";
 // Slot 2 //
 TAG_GLOCK = "Glock 17";
 TAG_REVOLVER = "Revolver";
@@ -74,7 +74,9 @@ TAG_SAWEDOFFSHOTGUN = "Sawed-Off Shotgun";
 TAG_SHOCKSMG = "Shock SMG";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon. Also no need for a tag.
+TAG_HEAVYRIFLE = "Heavy Rifle";
 // Slot 6 //
+TAG_HEAVYMINIGUN = "Heavy Minigun";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
@@ -92,6 +94,8 @@ GOTSHELLBOXMEDIUM = "\c[White]Picked up a \c[Red]medium box of shotgun shells\c[
 GOTSHELLBOXLARGE = "\c[White]Picked up a \c[Red]large box of shotgun shells\c[White].";
 GOTSTICKYAMMO = "\c[White]Picked up a \c[Olive]single sticky bomb\c[White].";
 GOTSTICKYBOX = "\c[White]Picked up a \c[Olive]box of sticky bombs\c[White].";
+GOT20MMMAG = "\c[White]Picked up a \c[DarkGray]20mm magazine\c[White].";
+GOT20MMBOX = "\c[White]Picked up a \c[DarkGray]box of 20mm rounds\c[White].";
 
 // ======================== //
 //   Item pickup messages   //
@@ -110,7 +114,7 @@ GOTLARGEBATTERY = "\c[White]Picked up a \c[Teal]large suit battery\c[White]. (+5
 
 
 // Powerups //
-GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)"; // soon to change i'm sure
+GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger axe swings!)";
 
 
 // ======================== //
@@ -119,3 +123,4 @@ GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger knife swings!)"; // so
 AMMO_SMGBATTERIES = "SMG Batteries";
 AMMO_REVOLVERBULLETS = "Revolver Bullets";
 AMMO_STICKYBOMBS = "Sticky Bombs";
+AMMO_20MM = "20mm Rounds";

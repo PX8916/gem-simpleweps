@@ -19,12 +19,14 @@ weapons/pummeler/load8		"Sounds/Weapons/3 - Pummeler/load8.wav"
 $random weapons/pummeler/load { weapons/pummeler/load1 weapons/pummeler/load2 weapons/pummeler/load3 weapons/pummeler/load4 weapons/pummeler/load5 weapons/pummeler/load6 weapons/pummeler/load7 weapons/pummeler/load8 }
 
 // Unnamed Sawed-Off Shotgun //
-weapons/sawedoff/fire		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbsawshot_st_f.wav"
 weapons/sawedoff/break		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_break.wav"
 weapons/sawedoff/close		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_close.wav"
 weapons/sawedoff/shake		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_shake.wav"
 
 weapons/sawedoff/load1		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_shell_in_1.wav"
 weapons/sawedoff/load2		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_shell_in_2.wav"
+weapons/sawedoff/fire1		"Sounds/Weapons/3 - Sawed-Off Shotgun/bv_mdhdb2_altfire01.ogg"
+weapons/sawedoff/fire2		"Sounds/Weapons/3 - Sawed-Off Shotgun/bv_mdhdb2_altfire02.ogg"
 
 $random weapons/sawedoff/load {weapons/sawedoff/load1 weapons/sawedoff/load2}
+$random weapons/sawedoff/fire {weapons/sawedoff/fire1 weapons/sawedoff/fire2}

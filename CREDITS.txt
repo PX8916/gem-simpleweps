@@ -1,5 +1,7 @@
 # Sprites & Graphics
 ## Weapons
+### Axe
+Neoworm
 ### Glock 17
 cybermonday
 ### Revolver
@@ -20,12 +22,6 @@ Captain J
 Sgt. Shivers (original reload animation, slightly edited)
 ### Shoulder-mounted Stickybomb Launcher
 SoniK.O.Fan/Tesefy
-### Knife
-TiberiumSoul (RIP)
-Farhan
-MartyKirra
-Mace
-Potetobloke
 
 ## Items
 ### Shell boxes, suit batteries, mini-stimpack, stimpack, medkit, Berserk pack
@@ -41,6 +37,9 @@ Skelegant (One Hell of a Marine, KickassGuy flavor)
 
 # Sounds
 ## Weapons
+### Axe
+Cyberwave-Orchestra (Pixabay) (swing)
+u_xjrmmgxfru (Pixabay) (impacts)
 ### Glock 17
 Crowbar Collective (Black Mesa)
 Valve Software (Counter-Strike: Global Offensive)
@@ -52,14 +51,12 @@ Crowbar Collective (Black Mesa) (pump)
 Tripwire Interactive (Killing Floor) (draw, pickup, load)
 TS_SOUND (fire slug)
 ### Unnamed Sawed-Off
+BLUE VERTIGO (Model DHDB2) (fire)
 Treyarch (Call of Duty: World at War)
 ### MMG First-Try Shock SMG
 Raven Software (Quake 4)
 ### Shoulder-mounted Stickybomb Launcher
 SeanTheBermanator (Doom Sound Bulb, DSTINK)
-
-### Knife
-None yet
 
 ## Effects
 ### Explosions

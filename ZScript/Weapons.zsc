@@ -1,8 +1,7 @@
 //// WEAPONS ////
 #include "./Weapons/Shoulder Sticky Launcher.zsc"
 // Slot 1 //
-#include "./Weapons/Placeholder - Fist.zsc"
-#include "./Weapons/1 - Knife.zsc"
+#include "./Weapons/1 - Axe.zsc"
 // Slot 2 //
 #include "./Weapons/2 - Glock.zsc"
 #include "./Weapons/2 - Revolver.zsc"

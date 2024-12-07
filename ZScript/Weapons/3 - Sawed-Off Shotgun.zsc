@@ -74,7 +74,7 @@ class GSW_SawedOffShotgun : GSW_Weapon replaces SuperShotgun
 				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
 				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
 				A_FireProjectile("GSW_SawedOffShotgunTracer", frandom(-4, 4), false, 7.5, -2.5, pitch: frandom(-4, 4));
-				A_StartSound("weapons/sawedoff/fire");
+				A_StartSound("weapons/sawedoff/fire", CHAN_WEAPON);
 				//A_FireBullets(8, 4, 20, 0, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_SawedOffShotgunTracer", -2.5, 7.5); // -1 bullets to always fire with spread
 				A_Overlay(-2, "Flash");
 			}
