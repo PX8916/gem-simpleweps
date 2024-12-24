@@ -26,6 +26,7 @@ SoniK.O.Fan/Tesefy
 FPV
 ### Heavy Minigun
 SoniK.O.Fan/Tesefy
+torridGristle (flash)
 
 ## Items
 ### Shell boxes, suit batteries, mini-stimpack, stimpack, medkit, Berserk pack
@@ -61,6 +62,8 @@ Treyarch (Call of Duty: World at War)
 Raven Software (Quake 4)
 ### Shoulder-mounted Stickybomb Launcher
 SeanTheBermanator (Doom Sound Bulb, DSTINK)
+### Heavy Minigun
+id Software (Doom 3)
 
 ## Effects
 ### Explosions
