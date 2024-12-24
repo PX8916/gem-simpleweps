@@ -1,0 +1,107 @@
+// Heavy Minigun
+// VERY HEFTY MINIGUN chambered in 20mm HE rounds.
+class GSW_HeavyMinigun : GSW_Weapon// replaces BFG9000
+{
+	action void A_FireHeavyMinigun()
+	{
+		if (invoker.CheckAmmo(PrimaryFire, false, true))
+		{
+			A_FireProjectile("GSW_HERound", random(-2.5, 2.5), true, 7.5, -2.5, pitch: random(-2.5, 2.5));
+			A_StartSound("weapons/hminigun/fire", CHAN_WEAPON);
+			//A_FireBullets(2, 2, -1, 12, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5); // We already depleted ammo.
+			//A_Overlay(-2, "Flash");
+		}
+		else
+			A_StartSound("weapons/shocksmg/empty");
+	}
+	Default
+	{
+		+WEAPON.AMMO_OPTIONAL
+		Weapon.SlotNumber 6;
+		Weapon.AmmoType "GSW_20mmMag";
+		Weapon.AmmoGive 40;
+		Weapon.AmmoUse 1;
+
+		Tag "$TAG_HEAVYMINIGUN";
+		Obituary "$KILL_HEAVYMINIGUN"; // Do the Sawed-Off thing where it's a projectile? Hell, use sprites.
+		Inventory.PickupMessage "$GOTHEAVYMINIGUN";
+
+		Weapon.UpSound "weapons/hminigun/draw";
+		Inventory.PickupSound "weapons/hminigun/pickup";
+		
+		Decal "BulletChip"; // temp
+		DamageType "Bullet";
+	}
+	States
+	{
+		Spawn:
+			HMGN Z -1;
+			Stop;
+		Select:
+			HMGN A 1 A_Raise(12);
+			Loop;
+		Deselect:
+			HMGN A 1 A_Lower(12);
+			Loop;
+		Ready:
+			HMGN A 1 A_WeaponReady;
+			Loop;
+		Fire:
+			HMGN A 3 {
+				A_FireHeavyMinigun();
+				A_StartSound("weapons/hminigun/windup", CHAN_BODY);
+				A_StartSound("weapons/hminigun/windupback", CHAN_AUTO);
+			}
+			HMGN BBBCCCDD 1;
+			HMGN E 2 A_FireHeavyMinigun;
+			HMGN FFGH 1;
+			HMGN A 0 A_ReFire("Hold");
+			Goto Release;
+		Hold:
+			HMGN A 1 {
+				A_FireHeavyMinigun();
+				A_StartSound("weapons/hminigun/loopback", CHAN_BODY, CHANF_LOOPING);
+			}
+			HMGN C 1;
+			HMGN E 1 A_FireHeavyMinigun;
+			HMGN G 1;
+			HMGN A 0 A_ReFire("Hold");
+			Goto Release;
+		/*Hold2:
+			HMGN AE 1 A_FireHeavyMinigun;
+			HMGN A 0 A_ReFire("Hold2");
+			Goto Release;*/
+		Release:
+			HMGN A 0 {
+				A_StartSound("weapons/hminigun/winddn", CHAN_BODY);
+				A_StartSound("weapons/hminigun/winddnback", CHAN_AUTO);
+			}
+			HMGN AABBCCCDDDEEEFFFFGGGGHHHH 1;
+			Goto Ready;
+	}
+}
+
+class GSW_HERound : Actor
+{
+	Default
+	{
+		Projectile;
+		Radius 6;
+		Height 8;
+		Speed 70;
+		DamageFunction (23);
+		ExplosionDamage 64;
+		ExplosionRadius 64;
+		Translation "0:127=[67,0,0]:[255,0,0]", "127:255=[255,0,0]:[255,223,0]";
+	}
+	States
+	{
+		Spawn:
+			GPRJ A -1 Bright;
+			Stop;
+		Death:
+			TNT1 A 0 A_Explode();
+			GPRJ BCDEF 2 Bright;
+			Stop;
+	}
+}

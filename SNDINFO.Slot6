@@ -1,0 +1,16 @@
+// Heavy Minigun //
+weapons/hminigun/fire1		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire1.wav"
+weapons/hminigun/fire2		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire2.wav"
+weapons/hminigun/fire3		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire3.wav"
+weapons/hminigun/fire4		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire4.wav"
+
+weapons/hminigun/windup		"Sounds/Weapons/6 - Heavy Minigun/cgun_wind_up.wav"
+weapons/hminigun/windupback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_windup_mix_01.wav"
+weapons/hminigun/winddn		"Sounds/Weapons/6 - Heavy Minigun/cgun_wind_down.wav"
+weapons/hminigun/winddnback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_winddown_mix_01.wav"
+weapons/hminigun/loopback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_motor_loop_01.wav"
+weapons/hminigun/pickup		"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_use_01.wav"
+
+$alias weapons/hminigun/draw	weapons/hminigun/pickup
+
+$random weapons/hminigun/fire { weapons/hminigun/fire1 weapons/hminigun/fire2 weapons/hminigun/fire3 weapons/hminigun/fire4 }

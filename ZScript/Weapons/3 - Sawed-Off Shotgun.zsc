@@ -32,7 +32,7 @@ class GSW_SawedOffShotgun : GSW_Weapon replaces SuperShotgun
 
 		//AttackSound "weapons/sawedoff/fire"; // It uses a projectile.
 		Weapon.UpSound "weapons/sawedoff/draw";
-		//Inventory.PickupSound "";
+		Inventory.PickupSound "weapons/sawedoff/pickup";
 
 		DamageType "Shotgun";
 	}

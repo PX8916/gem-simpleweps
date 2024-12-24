@@ -22,6 +22,10 @@ Captain J
 Sgt. Shivers (original reload animation, slightly edited)
 ### Shoulder-mounted Stickybomb Launcher
 SoniK.O.Fan/Tesefy
+### Heavy Rifle
+FPV
+### Heavy Minigun
+SoniK.O.Fan/Tesefy
 
 ## Items
 ### Shell boxes, suit batteries, mini-stimpack, stimpack, medkit, Berserk pack
