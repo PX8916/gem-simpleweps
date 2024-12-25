@@ -1,0 +1,117 @@
+//// Slot 1 ////
+// Axe //
+weapons/axe/swing1			"Sounds/Weapons/1 - Axe/swing1.mp3"
+weapons/axe/swing2			"Sounds/Weapons/1 - Axe/swing2.mp3"
+weapons/axe/hit1			"Sounds/Weapons/1 - Axe/hit1.mp3"
+weapons/axe/hit2			"Sounds/Weapons/1 - Axe/hit2.mp3"
+weapons/axe/bleed1			"Sounds/Weapons/1 - Axe/bleed1.mp3"
+weapons/axe/bleed2			"Sounds/Weapons/1 - Axe/bleed2.mp3"
+
+$random weapons/axe/swing	{ weapons/axe/swing1 weapons/axe/swing2 }
+$random weapons/axe/hit		{ weapons/axe/hit1 weapons/axe/hit2 }
+$random weapons/axe/bleed	{ weapons/axe/bleed1 weapons/axe/bleed2 }
+
+//// Slot 2 ////
+// Glock //
+weapons/glock/fire1			"Sounds/Weapons/2 - Glock/glock_01.wav"
+weapons/glock/fire2			"Sounds/Weapons/2 - Glock/glock_02.wav"
+
+weapons/glock/clipin		"Sounds/Weapons/2 - Glock/glock_clipin.wav"
+weapons/glock/clipout		"Sounds/Weapons/2 - Glock/glock_clipout.wav"
+weapons/glock/draw			"Sounds/Weapons/2 - Glock/glock_draw.wav"
+weapons/glock/empty			"Sounds/Weapons/2 - Glock/glock_empty.wav"
+weapons/glock/slideback		"Sounds/Weapons/2 - Glock/glock_slideback.wav"
+weapons/glock/sliderelease	"Sounds/Weapons/2 - Glock/glock_sliderelease.wav"
+
+$random weapons/glock/fire	{ weapons/glock/fire1 weapons/glock/fire2 }
+
+// Revolver //
+weapons/revolver/fire		"Sounds/Weapons/2 - Revolver/revolver-1_01.wav"
+weapons/revolver/clipin		"Sounds/Weapons/2 - Revolver/revolver_clipin.wav"
+weapons/revolver/clipout	"Sounds/Weapons/2 - Revolver/revolver_clipout.wav"
+weapons/revolver/draw		"Sounds/Weapons/2 - Revolver/revolver_draw.wav"
+weapons/revolver/hammer		"Sounds/Weapons/2 - Revolver/revolver_hammer.wav"
+weapons/revolver/open		"Sounds/Weapons/2 - Revolver/revolver_sideback.wav"
+weapons/revolver/close		"Sounds/Weapons/2 - Revolver/revolver_siderelease.wav"
+
+$alias weapons/revolver/pickup	weapons/revolver/close
+
+//// Slot 3 ////
+// "Pummeler" Shotgun //
+weapons/pummeler/fire		"Sounds/Weapons/3 - Pummeler/fire.wav"
+weapons/pummeler/fire-slug	"Sounds/Weapons/3 - Pummeler/fire-slug.wav"
+weapons/pummeler/pumpin		"Sounds/Weapons/3 - Pummeler/pumpin.wav"
+weapons/pummeler/pumpout	"Sounds/Weapons/3 - Pummeler/pumpout.wav"
+weapons/pummeler/draw		"Sounds/Weapons/3 - Pummeler/draw.wav"
+weapons/pummeler/pickup		"Sounds/Weapons/3 - Pummeler/pickup.wav"
+weapons/pummeler/empty		"Sounds/Weapons/3 - Pummeler/empty.wav"
+
+weapons/pummeler/load1		"Sounds/Weapons/3 - Pummeler/load1.wav"
+weapons/pummeler/load2		"Sounds/Weapons/3 - Pummeler/load2.wav"
+weapons/pummeler/load3		"Sounds/Weapons/3 - Pummeler/load3.wav"
+weapons/pummeler/load4		"Sounds/Weapons/3 - Pummeler/load4.wav"
+weapons/pummeler/load5		"Sounds/Weapons/3 - Pummeler/load5.wav"
+weapons/pummeler/load6		"Sounds/Weapons/3 - Pummeler/load6.wav"
+weapons/pummeler/load7		"Sounds/Weapons/3 - Pummeler/load7.wav"
+weapons/pummeler/load8		"Sounds/Weapons/3 - Pummeler/load8.wav"
+
+$random weapons/pummeler/load { weapons/pummeler/load1 weapons/pummeler/load2 weapons/pummeler/load3 weapons/pummeler/load4 weapons/pummeler/load5 weapons/pummeler/load6 weapons/pummeler/load7 weapons/pummeler/load8 }
+
+// Unnamed Sawed-Off Shotgun //
+weapons/sawedoff/break		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_break.wav"
+weapons/sawedoff/shake		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_shake.wav"
+weapons/sawedoff/close		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_close.wav"
+
+weapons/sawedoff/load1		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_shell_in_1.wav"
+weapons/sawedoff/load2		"Sounds/Weapons/3 - Sawed-Off Shotgun/dbshot_shell_in_2.wav"
+weapons/sawedoff/fire1		"Sounds/Weapons/3 - Sawed-Off Shotgun/bv_mdhdb2_altfire01.ogg"
+weapons/sawedoff/fire2		"Sounds/Weapons/3 - Sawed-Off Shotgun/bv_mdhdb2_altfire02.ogg"
+
+$random weapons/sawedoff/load {weapons/sawedoff/load1 weapons/sawedoff/load2}
+$random weapons/sawedoff/fire {weapons/sawedoff/fire1 weapons/sawedoff/fire2}
+
+$alias weapons/sawedoff/draw weapons/sawedoff/close
+$alias weapons/sawedoff/pickup weapons/sawedoff/shake
+
+//// Slot 4 ////
+// Shock SMG //
+weapons/shocksmg/fire1		"Sounds/Weapons/4 - Shock SMG/fire1.ogg"
+weapons/shocksmg/fire2		"Sounds/Weapons/4 - Shock SMG/fire2.ogg"
+
+weapons/shocksmg/fire_back	"Sounds/Weapons/4 - Shock SMG/hyper_stereo.ogg"
+weapons/shocksmg/empty		"Sounds/Weapons/4 - Shock SMG/dry_fire.ogg"
+weapons/shocksmg/bat_out	"Sounds/Weapons/4 - Shock SMG/cell_out.ogg"
+weapons/shocksmg/bat_in		"Sounds/Weapons/4 - Shock SMG/cell_in.ogg"
+weapons/shocksmg/close		"Sounds/Weapons/4 - Shock SMG/close.ogg"
+
+$alias weapons/shocksmg/draw	weapons/shocksmg/close
+$alias weapons/shocksmg/pickup	weapons/shocksmg/bat_out
+
+$random weapons/shocksmg/fire { weapons/shocksmg/fire1 weapons/shocksmg/fire2 }
+
+//// Slots 5 and 6 ////
+weapons/heavyweps/pickup	"Sounds/Weapons/5 - Heavy Anti-Material Rifle/m249_beltalign.wav"
+
+// Heavy Anti-Material Rifle //
+weapons/heavyamr/fire1		"Sounds/Weapons/5 - Heavy Anti-Material Rifle/50cal_box_01.wav"
+weapons/heavyamr/fire2		"Sounds/Weapons/5 - Heavy Anti-Material Rifle/50cal_box_02.wav"
+
+weapons/heavyamr/draw		"Sounds/Weapons/5 - Heavy Anti-Material Rifle/mrk_rifle_rechamber1b.wav"
+weapons/heavyamr/melee		"Sounds/Weapons/5 - Heavy Anti-Material Rifle/flick.wav"
+
+$random weapons/heavyamr/fire { weapons/heavyamr/fire1 weapons/heavyamr/fire2 }
+
+// Heavy Minigun //
+weapons/hminigun/fire1		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire1.wav"
+weapons/hminigun/fire2		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire2.wav"
+weapons/hminigun/fire3		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire3.wav"
+weapons/hminigun/fire4		"Sounds/Weapons/6 - Heavy Minigun/chaingun_fire4.wav"
+
+weapons/hminigun/windup		"Sounds/Weapons/6 - Heavy Minigun/cgun_wind_up.wav"
+weapons/hminigun/windupback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_windup_mix_01.wav"
+weapons/hminigun/winddn		"Sounds/Weapons/6 - Heavy Minigun/cgun_wind_down.wav"
+weapons/hminigun/winddnback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_winddown_mix_01.wav"
+weapons/hminigun/loopback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_motor_loop_01.wav"
+weapons/hminigun/draw		"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_use_01.wav"
+
+$random weapons/hminigun/fire { weapons/hminigun/fire1 weapons/hminigun/fire2 weapons/hminigun/fire3 weapons/hminigun/fire4 }

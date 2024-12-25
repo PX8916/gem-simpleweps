@@ -11,8 +11,8 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 			A_Overlay(-2, "Flash");
 		}
 		else
-			A_StartSound("weapons/shocksmg/empty");
-			//A_Saw("","", 25, "BulletPuff", SF_NORANDOM|SF_NOUSEAMMO); // Uncomment for Supercharge-style minigun sawing.
+			//A_StartSound("weapons/shocksmg/empty");
+			A_Saw("","", 25, "BulletPuff", SF_NORANDOM|SF_NOUSEAMMO); // Supercharge-style minigun sawing.
 	}
 	Default
 	{
@@ -27,6 +27,9 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 
 		Weapon.UpSound "weapons/hminigun/draw";
 		Inventory.PickupSound "weapons/heavyweps/pickup";
+
+		//Decal "BulletChip"; // temp
+		DamageType "Punch";
 	}
 	States
 	{
@@ -103,7 +106,7 @@ class GSW_HeavyMinigunBullet : FastProjectile
 		ExplosionDamage 64;
 		ExplosionRadius 64;
 		Translation "0:127=[67,0,0]:[255,0,0]", "127:255=[255,0,0]:[255,223,0]";
-		Obituary "$KILL_HEAVYMINIGUN";
+		Obituary "$KILLHEAVYMINIGUN";
 		Decal "BulletChip"; // temp
 		DamageType "Bullet";
 	}

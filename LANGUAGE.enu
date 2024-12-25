@@ -22,7 +22,7 @@ GOTSHOCKSMG = "\c[White]Picked up the \c[LightBlue]Shock SMG\c[White]! (Slot 4)"
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 GOTHEAVYAMR = "\c[White]Picked up the \c[Red]Heavy Anti-Material Rifle\c[White]! (Slot 5)";
 // Slot 6 //
-GOTHEAVYMINIGUN = "\c[White]Picked up the \c[Gold]Heavy Minigun\c[White]! (Slot 6)";
+GOTHEAVYMINIGUN = "\c[White]Picked up the \c[Yellow]Heavy Minigun\c[White]! (Slot 6)";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
@@ -50,7 +50,7 @@ KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 KILLHEAVYAMR = "%o was crushed by %k's \c[Red]Heavy Anti-Material Rifle\c[Gold] with a loud, loud \c[Red]crunch\c[Gold]!";
 // Slot 6 //
-KILLHEAVYMINIGUN = "%o couldn't bear the weight of %k's \c[Gold]Heavy Minigun\c[Gold].";
+KILLHEAVYMINIGUN = "%o couldn't bear the weight of %k's \c[Yellow]Heavy Minigun\c[Gold].";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //

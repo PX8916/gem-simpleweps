@@ -66,6 +66,7 @@ SeanTheBermanator (Doom Sound Bulb, DSTINK)
 Treyarch (Call of Duty: United Offensive)
 Treyarch (Call of Duty 2)
 New World Interactive (Insurgency)
+freesound_community (Pixabay) (melee sound)
 ### Heavy Minigun
 id Software (Doom 3)
 

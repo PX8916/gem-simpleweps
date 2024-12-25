@@ -1,4 +1,5 @@
 // Heavy Anti-Material Rifle
+// Doesn't require reloading, deals enough damage to one-hit a Revenant.
 // "I too use a fucking sniper rifle for CQC."
 // "Every situation I see is a nail, and the M82 I'm holding is a hammer."
 // "That thunderous CRACK of a .50 BMG every time you pull the trigger makes it feel like you're PUNCHING a hole in the UNIVERSE."
@@ -6,6 +7,7 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 {
 	Default
 	{
+		+WEAPON.AMMO_OPTIONAL
 		Weapon.Kickback 400;
 		Weapon.SlotNumber 5;
 		Weapon.AmmoType "GSW_20mmMag";
@@ -17,6 +19,9 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 
 		Weapon.UpSound "weapons/heavyamr/draw";
 		Inventory.PickupSound "weapons/heavyweps/pickup";
+
+		//Decal "BulletChip"; // temp
+		DamageType "Punch";
 	}
 	States
 	{
@@ -52,6 +57,15 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 			HAMR B 8;
 			HAMR A 4;
 			Goto Ready;
+		Fire.Empty:
+			HAMR A 0 A_StartSound("weapons/shocksmg/empty", CHAN_WEAPON);
+			HAMR BBBCCC 2;
+			HAMR C 2 A_StartSound("weapons/heavyamr/melee", CHAN_BODY);
+			HAMR B 1;
+			HAMR A 8 {
+				A_CustomPunch(45, norandom:true, range: meleeRange + 20, meleesound: "*fist");
+			}
+			Goto Ready;
 		Flash:
 			HAMF A 1 Bright A_AttachLightDef("Flash", "GSW_GunFlash");
 			HAMF B 1 Bright;
@@ -75,7 +89,7 @@ class GSW_HeavyAMRBullet : FastProjectile
 		Speed 200;
 		DamageFunction (300);
 		Translation "0:223=[98,57,1]:[255,243,21]", "223:255=[255,243,21]:[255,255,254]";
-		Obituary "$KILL_HEAVYAMR";
+		Obituary "$KILLHEAVYAMR";
 		Decal "BulletChip"; // temp
 		DamageType "Bullet";
 	}
