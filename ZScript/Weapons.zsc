@@ -11,6 +11,7 @@
 // Slot 4 //
 #include "./Weapons/4 - Shock SMG.zsc"
 // Slot 5 //
+#include "./Weapons/5 - Heavy Anti-Material Rifle.zsc"
 // Slot 6 //
 #include "./Weapons/6 - Heavy Minigun.zsc"
 // Slot 7 //

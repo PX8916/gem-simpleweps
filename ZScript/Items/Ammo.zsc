@@ -142,7 +142,7 @@ class GSW_StickyBox : GSW_StickyAmmo replaces RocketBox
 	}
 }
 
-class GSW_20mmMag : Ammo// replaces Cell
+class GSW_20mmMag : Ammo replaces Cell
 {
 	Default
 	{
@@ -161,7 +161,7 @@ class GSW_20mmMag : Ammo// replaces Cell
 			Stop;
 	}
 }
-class GSW_20mmBox : GSW_20mmMag// replaces CellPack
+class GSW_20mmBox : GSW_20mmMag replaces CellPack
 {
 	Default
 	{

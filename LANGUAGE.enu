@@ -20,7 +20,7 @@ GOTSAWEDOFFSHOTGUN = "\c[White]Picked up the \c[DarkGray]Sawed-Off Shotgun\c[Whi
 GOTSHOCKSMG = "\c[White]Picked up the \c[LightBlue]Shock SMG\c[White]! (Slot 4)";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
-GOTHEAVYRIFLE = "\c[White]Picked up the \c[Brown]Heavy Rifle\c[White]! (Slot 5)";
+GOTHEAVYAMR = "\c[White]Picked up the \c[Red]Heavy Anti-Material Rifle\c[White]! (Slot 5)";
 // Slot 6 //
 GOTHEAVYMINIGUN = "\c[White]Picked up the \c[Gold]Heavy Minigun\c[White]! (Slot 6)";
 // Slot 7 //
@@ -48,9 +48,9 @@ KILLSAWEDOFFSHOTGUN = "%o was splattered by %k's \c[DarkGray]Sawed-Off Shotgun\c
 KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
-KILLHEAVYRIFLE = "%o couldn't bear the weight of %k's \c[Brown]Heavy Rifle\c[Gold].";
+KILLHEAVYAMR = "%o was crushed by %k's \c[Red]Heavy Anti-Material Rifle\c[Gold] with a loud, loud \c[Red]crunch\c[Gold]!";
 // Slot 6 //
-KILLHEAVYMINIGUN = "%o was crushed by %k's \c[Gold]Heavy Minigun\c[Gold] with a loud, loud \c[Red]crunch\c[Gold]!";
+KILLHEAVYMINIGUN = "%o couldn't bear the weight of %k's \c[Gold]Heavy Minigun\c[Gold].";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
@@ -74,7 +74,7 @@ TAG_SAWEDOFFSHOTGUN = "Sawed-Off Shotgun";
 TAG_SHOCKSMG = "Shock SMG";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon. Also no need for a tag.
-TAG_HEAVYRIFLE = "Heavy Rifle";
+TAG_HEAVYAMR = "Heavy Anti-Material Rifle";
 // Slot 6 //
 TAG_HEAVYMINIGUN = "Heavy Minigun";
 // Slot 7 //

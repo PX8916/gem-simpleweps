@@ -16,38 +16,38 @@ class GSW_ThingReplacer : StaticEventHandler
 //				break;
 		// Paradise, Godless Night, and any other map(set) that uses Supercharge
 			// weapons
+			case 'TangoChainsaw':
+				e.Replacement = "GSW_Revolver";
+				break;
 			case 'TangoPistol':
 				e.Replacement = "GSW_Revolver"; // I don't think Tango's placing pistols around, but... If he did, you should get SOMETHING out of it!
 				break;
 			case 'TangoShotgun':
 				e.Replacement = "GSW_Pummeler";
 				break;
+			case 'TangoSuperShotgun':
+				e.Replacement = "GSW_PummelerRandom";
+				break;
 			case 'TangoAssaultRifle':
 				e.Replacement = "GSW_ShockSMG";
-				break;
-			case 'TangoChainsaw':
-				e.Replacement = "GSW_Revolver";
 				break;
 //			case 'TangoMinigun':
 //				e.Replacement = "GSW_LaserMinigun"; // When I remake this...
 //				break;
-//			case 'TangoPlasmaRifle':
-//				e.Replacement = "PlasmaRifle"; // Loud Ass Blue Diamond Gun
-//				break;
-			case 'TangoSuperShotgun':
-				e.Replacement = "GSW_PummelerRandom";
-				break;
 			case 'TangoRocketLauncher':
 				e.Replacement = "GSW_ShoulderStickyLauncher";
+				break;
+			case 'TangoPlasmaRifle':
+				e.Replacement = "GSW_HeavyAMR"; // Loud Ass Blue Diamond Gun
+				break;
+			case 'TangoBFG9000':
+				e.Replacement = "GSW_HeavyMinigun";
 				break;
 //			case 'TangoStomper':
 //				e.Replacement = "";
 //				break;
 //			case 'TangoScrapgun':
 //				e.Replacement = "";
-//				break;
-//			case 'TangoBFG9000':
-//				e.Replacement = "BFG9000";
 //				break;
 			// Nailgun seems to be unused and inaccessible
 			// Ammo
@@ -70,17 +70,17 @@ class GSW_ThingReplacer : StaticEventHandler
 			case 'TangoRocketBox':
 				e.Replacement = "GSW_StickyBox";
 				break;
+			case 'TangoCell':
+				e.Replacement = "GSW_20mmMag";
+				break;
+			case 'TangoCellPack':
+				e.Replacement = "GSW_20mmBox";
+				break;
 //			case 'TangoScrapDrum':
 //				e.Replacement = "";
 //				break;
 //			case 'TangoScrapDrumPack':
 //				e.Replacement = "";
-//				break;
-//			case 'TangoCell':
-//				e.Replacement = "Cell";
-//				break;
-//			case 'TangoCellPack':
-//				e.Replacement = "CellPack";
 //				break;
 //			case 'TangoStomperAmmo':
 //				e.Replacement = "";
@@ -117,18 +117,28 @@ class GSW_ThingReplacer : StaticEventHandler
 				e.Replacement = "GSW_Medkit";
 				break;
 		// Skulltag
-//			case 'PlasmaRifleSpawner':
-//				e.Replacement = "PlasmaRifle";
-//				break;
 			case 'ChaingunSpawner':
 				e.Replacement = "GSW_ShockSMG";
 				break;
-			case 'RocketLauncherSpawner':
-				e.Replacement = "GSW_ShoulderStickyLauncher";
-				break;
-//			case 'BFGSpawner':
-//				e.Replacement = "BFG9000";
+//			case 'Minigun':
+//			case 'PTag_Minigun':
+//				e.Replacement = "GSW_LaserMinigun";
 //				break;
+			case 'RocketLauncherSpawner':
+			case 'GrenadeLauncher':
+			case 'PTag_GrenadeLauncher':
+				e.Replacement = "GSW_ShoulderStickyLauncher"; // Grenades are pointless...
+				break;
+			case 'PlasmaRifleSpawner':
+			case 'Railgun':
+			case 'PTag_Railgun':
+				e.Replacement = "GSW_HeavyAMR";
+				break;
+			case 'BFGSpawner':
+			case 'BFG10K':
+			case 'PTag_BFG10K':
+				e.Replacement = "GSW_HeavyMinigun";
+				break;
 //			case 'BlueArmorSpawner':
 //				e.Replacement = "GSW_LargeSuitBattery";
 //				break;
@@ -140,22 +150,6 @@ class GSW_ThingReplacer : StaticEventHandler
 //				break;
 //			case 'RedArmor':
 //				e.Replacement = "GSW_LargeSuitBattery"; // I need a "huge battery"...
-//				break;
-//			case 'Minigun':
-//			case 'PTag_Minigun':
-//				e.Replacement = "GSW_LaserMinigun";
-//				break;
-			case 'GrenadeLauncher':
-			case 'PTag_GrenadeLauncher':
-				e.Replacement = "GSW_ShoulderStickyLauncher"; // Grenades are pointless...
-				break;
-//			case 'Railgun':
-//			case 'PTag_Railgun':
-//				e.Replacement = "";
-//				break;
-//			case 'BFG10K':
-//			case 'PTag_BFG10K':
-//				e.Replacement = "";
 //				break;
 		}
     }

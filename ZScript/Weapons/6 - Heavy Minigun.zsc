@@ -1,6 +1,6 @@
 // Heavy Minigun
 // VERY HEFTY MINIGUN chambered in 20mm HE rounds.
-class GSW_HeavyMinigun : GSW_Weapon// replaces BFG9000
+class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 {
 	action void A_FireHeavyMinigun()
 	{
@@ -12,6 +12,7 @@ class GSW_HeavyMinigun : GSW_Weapon// replaces BFG9000
 		}
 		else
 			A_StartSound("weapons/shocksmg/empty");
+			//A_Saw("","", 25, "BulletPuff", SF_NORANDOM|SF_NOUSEAMMO); // Uncomment for Supercharge-style minigun sawing.
 	}
 	Default
 	{
@@ -25,10 +26,7 @@ class GSW_HeavyMinigun : GSW_Weapon// replaces BFG9000
 		Inventory.PickupMessage "$GOTHEAVYMINIGUN";
 
 		Weapon.UpSound "weapons/hminigun/draw";
-		Inventory.PickupSound "weapons/hminigun/pickup";
-		
-		Decal "BulletChip"; // temp
-		DamageType "Bullet";
+		Inventory.PickupSound "weapons/heavyweps/pickup";
 	}
 	States
 	{
@@ -94,11 +92,10 @@ class GSW_HeavyMinigun : GSW_Weapon// replaces BFG9000
 	}
 }
 
-class GSW_HeavyMinigunBullet : Actor
+class GSW_HeavyMinigunBullet : FastProjectile
 {
 	Default
 	{
-		Projectile;
 		Radius 6;
 		Height 8;
 		Speed 70;
@@ -107,6 +104,8 @@ class GSW_HeavyMinigunBullet : Actor
 		ExplosionRadius 64;
 		Translation "0:127=[67,0,0]:[255,0,0]", "127:255=[255,0,0]:[255,223,0]";
 		Obituary "$KILL_HEAVYMINIGUN";
+		Decal "BulletChip"; // temp
+		DamageType "Bullet";
 	}
 	States
 	{

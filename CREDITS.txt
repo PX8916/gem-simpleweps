@@ -22,8 +22,8 @@ Captain J
 Sgt. Shivers (original reload animation, slightly edited)
 ### Shoulder-mounted Stickybomb Launcher
 SoniK.O.Fan/Tesefy
-### Heavy Rifle
-FPV
+### Heavy Anti-Material Rifle
+SoniK.O.Fan/Tesefy
 ### Heavy Minigun
 SoniK.O.Fan/Tesefy
 torridGristle (flash)
@@ -62,6 +62,10 @@ Treyarch (Call of Duty: World at War)
 Raven Software (Quake 4)
 ### Shoulder-mounted Stickybomb Launcher
 SeanTheBermanator (Doom Sound Bulb, DSTINK)
+### Heavy Anti-Material Rifle
+Treyarch (Call of Duty: United Offensive)
+Treyarch (Call of Duty 2)
+New World Interactive (Insurgency)
 ### Heavy Minigun
 id Software (Doom 3)
 
