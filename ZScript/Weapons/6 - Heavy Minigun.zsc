@@ -102,7 +102,7 @@ class GSW_HeavyMinigunBullet : FastProjectile
 		Radius 6;
 		Height 8;
 		Speed 70;
-		DamageFunction (23);
+		DamageFunction (64);
 		ExplosionDamage 64;
 		ExplosionRadius 64;
 		Translation "0:127=[67,0,0]:[255,0,0]", "127:255=[255,0,0]:[255,223,0]";
