@@ -109,8 +109,8 @@ GOTMEDKIT = "\c[White]Picked up a \c[Red]medkit\c[White]. (+25 health)";
 GOTMEDKITNEED = "\c[White]Picked up a \c[Red]medkit\c[White]. Feeling a lot better. (+25 health)";
 // Armor //
 GOTSMALLBATTERY = "\c[White]Picked up a \c[Teal]small suit battery\c[White]. (+1 AP)";
-GOTMEDIUMBATTERY = "\c[White]Picked up a \c[Teal]medium suit battery\c[White]. (+25 AP)";
-GOTLARGEBATTERY = "\c[White]Picked up a \c[Teal]large suit battery\c[White]. (+50 AP)";
+GOTMEDIUMBATTERY = "\c[White]Picked up a \c[Teal]medium suit battery\c[White]. (+50 AP)";
+GOTLARGEBATTERY = "\c[White]Picked up a \c[Teal]large suit battery\c[White]. (+100 AP)";
 
 
 // Powerups //

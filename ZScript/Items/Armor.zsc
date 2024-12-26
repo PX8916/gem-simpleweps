@@ -6,9 +6,9 @@ class GSW_SmallSuitBattery : BasicArmorBonus replaces ArmorBonus
 		Height 16;
 		Inventory.Pickupmessage "$GOTSMALLBATTERY";
 		Inventory.Icon "IARMM0";
-		Armor.Savepercent 50;
-		Armor.Saveamount 1;
-		Armor.Maxsaveamount 400;
+		Armor.SavePercent 50;
+		Armor.SaveAmount 1;
+		Armor.MaxSaveAmount 400;
 		+COUNTITEM
 		+INVENTORY.ALWAYSPICKUP
 	}
@@ -24,7 +24,7 @@ class GSW_MediumSuitBattery : GSW_SmallSuitBattery replaces GreenArmor
 	Default
 	{
 		Inventory.Pickupmessage "$GOTMEDIUMBATTERY";
-		Armor.Saveamount 25;
+		Armor.SaveAmount 50;
 	}
 	States
 	{
@@ -38,7 +38,7 @@ class GSW_LargeSuitBattery : GSW_SmallSuitBattery replaces BlueArmor
 	Default
 	{
 		Inventory.Pickupmessage "$GOTLARGEBATTERY";
-		Armor.Saveamount 50;
+		Armor.SaveAmount 100;
 	}
 	States
 	{
