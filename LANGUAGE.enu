@@ -124,3 +124,10 @@ AMMO_SMGBATTERIES = "SMG Batteries";
 AMMO_REVOLVERBULLETS = "Revolver Bullets";
 AMMO_STICKYBOMBS = "Sticky Bombs";
 AMMO_20MM = "20mm Rounds";
+
+// ======================== //
+//           Menus          //
+// ======================== //
+GSW_MENU_ACTIONS = "Gem's Simple Weapons Mod - Actions";
+KEY_RELOAD = "Reload";
+KEY_SHOULDERSTICKY = "Fire sticky bomb";
