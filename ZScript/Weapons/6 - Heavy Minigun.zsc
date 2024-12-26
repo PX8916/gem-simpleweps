@@ -56,12 +56,15 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 			HMGN A 3 {
 				A_FireHeavyMinigun();
 				A_StartSound("weapons/hminigun/windup", CHAN_BODY);
-				A_StartSound("weapons/hminigun/windupback", CHAN_AUTO);
+				A_StartSound("weapons/hminigun/windupback", CHAN_5);
 			}
 			HMGN BBBCCCDD 1;
 			HMGN E 2 A_FireHeavyMinigun;
 			HMGN FFGH 1;
-			HMGN A 0 A_StartSound("weapons/hminigun/loopback", CHAN_BODY, CHANF_LOOPING);
+			HMGN A 0 {
+				A_StartSound("weapons/hminigun/loopback", CHAN_BODY, CHANF_LOOPING);
+				A_StartSound("weapons/hminigun/loop", CHAN_5, CHANF_LOOPING);
+			}
 			HMGN A 0 A_ReFire("Hold");
 			Goto Release;
 		Hold:
@@ -78,7 +81,7 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 		Release:
 			HMGN A 0 {
 				A_StartSound("weapons/hminigun/winddn", CHAN_BODY);
-				A_StartSound("weapons/hminigun/winddnback", CHAN_AUTO);
+				A_StartSound("weapons/hminigun/winddnback", CHAN_5);
 			}
 			HMGN AABBCCCDDDEEEFFFFGGGGHHHH 1;
 			Goto Ready;

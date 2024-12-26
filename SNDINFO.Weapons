@@ -111,6 +111,7 @@ weapons/hminigun/windup		"Sounds/Weapons/6 - Heavy Minigun/cgun_wind_up.wav"
 weapons/hminigun/windupback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_windup_mix_01.wav"
 weapons/hminigun/winddn		"Sounds/Weapons/6 - Heavy Minigun/cgun_wind_down.wav"
 weapons/hminigun/winddnback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_winddown_mix_01.wav"
+weapons/hminigun/loop		"Sounds/Weapons/6 - Heavy Minigun/cgun_loop.ogg"
 weapons/hminigun/loopback	"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_motor_loop_01.wav"
 weapons/hminigun/draw		"Sounds/Weapons/6 - Heavy Minigun/chaingun_cg_use_01.wav"
 

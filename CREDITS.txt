@@ -69,6 +69,7 @@ New World Interactive (Insurgency)
 freesound_community (Pixabay) (melee sound)
 ### Heavy Minigun
 id Software (Doom 3)
+Combine_Kegan (Backing loop, since the Doom 3 sound rips didn't have it)
 
 ## Effects
 ### Explosions
