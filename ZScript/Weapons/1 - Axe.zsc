@@ -41,7 +41,7 @@ class GSW_Axe : GSW_Weapon replaces Fist
 			AXEW IJKK 2;
 			AXEW KKKKLMN 1;
 			TNT1 A 0 A_PlaySound("weapons/axe/swing");
-			AXEW O 2 A_CustomPunch(30, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
+			AXEW O 2 A_CustomPunch(60, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
 			TNT1 A 15;
 			TNT1 A 0 A_ReFire;
 			TNT1 A 3;
@@ -55,7 +55,7 @@ class GSW_Axe : GSW_Weapon replaces Fist
 			AXEW IJKK 1;
 			AXEW KLMN 1;
 			TNT1 A 0 A_PlaySound("weapons/axe/swing");
-			AXEW O 2 A_CustomPunch(300, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
+			AXEW O 2 A_CustomPunch(600, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
 			TNT1 A 13;
 			TNT1 A 0 A_ReFire("Hold.Berserk");
 			TNT1 A 3;
