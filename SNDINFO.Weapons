@@ -89,6 +89,19 @@ $alias weapons/shocksmg/pickup	weapons/shocksmg/bat_out
 
 $random weapons/shocksmg/fire { weapons/shocksmg/fire1 weapons/shocksmg/fire2 }
 
+// Dual MAC-10s //
+weapons/dualmacs/fire1		"Sounds/Weapons/4 - Dual MACs/mac10_01.wav"
+weapons/dualmacs/fire2		"Sounds/Weapons/4 - Dual MACs/mac10_02.wav"
+weapons/dualmacs/fire3		"Sounds/Weapons/4 - Dual MACs/mac10_03.wav"
+
+weapons/dualmacs/back		"Sounds/Weapons/4 - Dual MACs/mac10_boltback.wav"
+weapons/dualmacs/forward	"Sounds/Weapons/4 - Dual MACs/mac10_boltforward.wav"
+weapons/dualmacs/mag_in		"Sounds/Weapons/4 - Dual MACs/mac10_clipin.wav" // Likely not going to be using reloading, but it's worth being here anyway I guess.
+weapons/dualmacs/mag_out	"Sounds/Weapons/4 - Dual MACs/mac10_clipout.wav"
+weapons/dualmacs/draw		"Sounds/Weapons/4 - Dual MACs/mac10_draw.wav"
+
+$random weapons/dualmacs/fire { weapons/dualmacs/fire1 weapons/dualmacs/fire2 weapons/dualmacs/fire3 }
+$alias weapons/dualmacs/pickup	weapons/dualmacs/mag_in
 //// Slots 5 and 6 ////
 weapons/heavyweps/pickup	"Sounds/Weapons/5 - Heavy Anti-Material Rifle/m249_beltalign.wav"
 

@@ -29,6 +29,7 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 		Inventory.PickupSound "weapons/heavyweps/pickup";
 
 		//Decal "BulletChip"; // temp
+		Obituary "$KILLHEAVYMINIGUN_MELEE";
 		DamageType "Punch";
 	}
 	States
@@ -46,6 +47,7 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 			HMGN AAAAAA 1 {
 				A_Lower(12);
 				A_StopSound(CHAN_BODY);
+				A_StopSound(CHAN_5);
 			}
 			HMGN A 0 A_Overlay(-3, "HandStop");
 			Loop;

@@ -21,6 +21,7 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 		Inventory.PickupSound "weapons/heavyweps/pickup";
 
 		//Decal "BulletChip"; // temp
+		Obituary "$KILLHEAVYAMR_MELEE";
 		DamageType "Punch";
 	}
 	States

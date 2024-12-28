@@ -11,9 +11,9 @@ class GSW_ThingReplacer : StaticEventHandler
 				e.Replacement = "GSW_Revolver"; // Shooty bang bang.
 				break;
 		// Eviternity I & II
-//			case 'Perforator':
-//				e.Replacement = "GWM_Perforator";
-//				break;
+			case 'Perforator':
+				e.Replacement = "GSW_DualMACs"; // BRRRRRRRRRRRRRRRRT
+				break;
 		// Paradise, Godless Night, and any other map(set) that uses Supercharge
 			// weapons
 			case 'TangoChainsaw':

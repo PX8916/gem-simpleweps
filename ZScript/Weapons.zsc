@@ -10,6 +10,7 @@
 #include "./Weapons/3 - Sawed-Off Shotgun.zsc"
 // Slot 4 //
 #include "./Weapons/4 - Shock SMG.zsc"
+#include "./Weapons/4 - Dual MACs.zsc"
 // Slot 5 //
 #include "./Weapons/5 - Heavy Anti-Material Rifle.zsc"
 // Slot 6 //

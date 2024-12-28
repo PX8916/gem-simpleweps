@@ -18,6 +18,7 @@ GOTPUMMELERFRAG = "\c[White]Collected the \c[Black]Frag Chip\c[White] for the \c
 GOTSAWEDOFFSHOTGUN = "\c[White]Picked up the \c[DarkGray]Sawed-Off Shotgun\c[White]! (Slot 3)";
 // Slot 4 //
 GOTSHOCKSMG = "\c[White]Picked up the \c[LightBlue]Shock SMG\c[White]! (Slot 4)";
+GOTDUALMACS = "\c[White]Picked up \c[DarkGray]two MAC-10s\c[White]!! Hot damn! (Slot 4)";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 GOTHEAVYAMR = "\c[White]Picked up the \c[Red]Heavy Anti-Material Rifle\c[White]! (Slot 5)";
@@ -46,11 +47,14 @@ KILLPUMMELERFRAG = "%o was blown to smithereens by %k's \c[Black]Frag Chip\c[Gol
 KILLSAWEDOFFSHOTGUN = "%o was splattered by %k's \c[DarkGray]Sawed-Off Shotgun\c[Gold].";
 // Slot 4 //
 KILLSHOCKSMG = "%o had their buzz killed by %k's \c[LightBlue]Shock SMG\c[Gold].";
+KILLDUALMACS = "%o was swiftly eviscerated by %k's \c[DarkGray]dual MAC-10s\c[Gold].";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon.
 KILLHEAVYAMR = "%o was crushed by %k's \c[Red]Heavy Anti-Material Rifle\c[Gold] with a loud, loud \c[Red]crunch\c[Gold]!";
+KILLHEAVYAMR_MELEE = "%o was sent flying by %k's \c[Red]Heavy Anti-Material Rifle\c[Gold], despite it being out of ammo.";
 // Slot 6 //
 KILLHEAVYMINIGUN = "%o couldn't bear the weight of %k's \c[Yellow]Heavy Minigun\c[Gold].";
+KILLHEAVYMINIGUN_MELEE = "%o's insides were shredded by %k's \c[Yellow]Heavy Minigun\c[Gold], despite it being out of ammo.";
 // Slot 7 //
 // Slot 8 //
 // Slot 9 //
@@ -72,6 +76,7 @@ TAG_PUMMELER = "\"Pummeler\" Shotgun";
 TAG_SAWEDOFFSHOTGUN = "Sawed-Off Shotgun";
 // Slot 4 //
 TAG_SHOCKSMG = "Shock SMG";
+TAG_DUALMACS = "Dual MAC-10s";
 // Slot 5 //
 // None -- The Sticky Launcher is usable at any time, and is not a normal weapon. Also no need for a tag.
 TAG_HEAVYAMR = "Heavy Anti-Material Rifle";
