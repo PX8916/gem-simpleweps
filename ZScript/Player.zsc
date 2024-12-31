@@ -12,10 +12,9 @@ class GSW_Player : DoomPlayer
 		Player.WeaponSlot 1, "GSW_Axe";
 		Player.WeaponSlot 2, "GSW_Glock", "GSW_Revolver";
 		Player.WeaponSlot 3, "GSW_Pummeler", "GSW_SawedOffShotgun";
-		Player.WeaponSlot 4, "GSW_ShockSMG";
-//		Player.WeaponSlot 5, "RocketLauncher";
-//		Player.WeaponSlot 6, "PlasmaRifle";
-//		Player.WeaponSlot 7, "BFG9000";
+		Player.WeaponSlot 4, "GSW_ShockSMG", "GSW_DualMACs";
+		Player.WeaponSlot 5, "GSW_HeavyAMR";
+		Player.WeaponSlot 6, "GSW_HeavyMinigun";
 		Player.AttackZOffset 11;
 	}
 }

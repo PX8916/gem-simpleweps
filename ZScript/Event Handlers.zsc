@@ -31,9 +31,9 @@ class GSW_ThingReplacer : StaticEventHandler
 			case 'TangoAssaultRifle':
 				e.Replacement = "GSW_ShockSMG";
 				break;
-//			case 'TangoMinigun':
-//				e.Replacement = "GSW_LaserMinigun"; // When I remake this...
-//				break;
+			case 'TangoMinigun':
+				e.Replacement = "GSW_DualMACs"; // BRRRRRRRRRRRRRRRRT
+				break;
 			case 'TangoRocketLauncher':
 				e.Replacement = "GSW_ShoulderStickyLauncher";
 				break;
@@ -120,10 +120,10 @@ class GSW_ThingReplacer : StaticEventHandler
 			case 'ChaingunSpawner':
 				e.Replacement = "GSW_ShockSMG";
 				break;
-//			case 'Minigun':
-//			case 'PTag_Minigun':
-//				e.Replacement = "GSW_LaserMinigun";
-//				break;
+			case 'Minigun':
+			case 'PTag_Minigun':
+				e.Replacement = "GSW_DualMACs"; // BRRRRRRRRRRRRRRRRT
+				break;
 			case 'RocketLauncherSpawner':
 			case 'GrenadeLauncher':
 			case 'PTag_GrenadeLauncher':

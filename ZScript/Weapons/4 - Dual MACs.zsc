@@ -102,7 +102,7 @@ class GSW_DualMACs : GSW_Weapon // Replaces both Perforator and Minigun, so it's
 				if (invoker.CheckAmmo(PrimaryFire, false, true))
 				{
 					A_FireBullets(2, 2, -1, 30, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", 0.5, -7.5); // -1 bullets to always fire with spread
-					//A_Overlay(-4, "Flash.Left");
+					A_Overlay(-4, "Flash.Left");
 					A_StartSound("weapons/dualmacs/fire", CHAN_WEAPON, CHANF_OVERLAP);
 				}
 				else
@@ -121,7 +121,7 @@ class GSW_DualMACs : GSW_Weapon // Replaces both Perforator and Minigun, so it's
 				if (invoker.CheckAmmo(PrimaryFire, false, true))
 				{
 					A_FireBullets(2, 2, -1, 30, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", 0.5, 7.5); // -1 bullets to always fire with spread
-					//A_Overlay(-5, "Flash.Right");
+					A_Overlay(-5, "Flash.Right");
 					A_StartSound("weapons/dualmacs/fire", CHAN_WEAPON, CHANF_OVERLAP);
 				}
 				else
