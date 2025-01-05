@@ -114,6 +114,7 @@ class GSW_HeavyMinigunBullet : FastProjectile
 		Obituary "$KILLHEAVYMINIGUN";
 		Decal "BulletChip"; // temp
 		DamageType "Bullet";
+		DontHurtShooter; // I swear to god if this works // OH MY FUCKING GOD WHY IS THIS EVEN DEPRECATED
 	}
 	States
 	{
@@ -121,7 +122,7 @@ class GSW_HeavyMinigunBullet : FastProjectile
 			GPRJ A -1 Bright;
 			Stop;
 		Death:
-			TNT1 A 0 A_Explode();
+			TNT1 A 0 A_Explode(); // i'm so mad. passing 0 to the flags did nothing but that fucking property up there works fine
 			GPRJ BCDEF 2 Bright;
 			Stop;
 	}
