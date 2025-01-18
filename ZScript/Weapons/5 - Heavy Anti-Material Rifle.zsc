@@ -20,9 +20,7 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 		Weapon.UpSound "weapons/heavyamr/draw";
 		Inventory.PickupSound "weapons/heavyweps/pickup";
 
-		//Decal "BulletChip"; // temp
 		Obituary "$KILLHEAVYAMR_MELEE";
-		DamageType "Punch";
 	}
 	States
 	{
@@ -64,7 +62,7 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 			HAMR C 2 A_StartSound("weapons/heavyamr/melee", CHAN_BODY);
 			HAMR B 1;
 			HAMR A 8 {
-				A_CustomPunch(45, norandom:true, range: meleeRange + 20, meleesound: "*fist");
+				A_CustomPunch(45, true, 0, "GSW_HeavyAMRHitPuff", meleeRange + 20, meleesound: "*fist");
 			}
 			Goto Ready;
 		Flash:
@@ -79,7 +77,6 @@ class GSW_HeavyAMR : GSW_Weapon replaces PlasmaRifle
 			Stop;
 	}
 }
-
 class GSW_HeavyAMRBullet : FastProjectile
 {
 	Default
@@ -102,5 +99,12 @@ class GSW_HeavyAMRBullet : FastProjectile
 		Death:
 			GPRJ HIJKL 2 Bright;
 			Stop;
+	}
+}
+class GSW_HeavyAMRHitPuff : GSW_BulletPuff
+{
+	Default
+	{
+		DamageType "Punch";
 	}
 }

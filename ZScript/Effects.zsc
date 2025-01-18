@@ -17,3 +17,40 @@ class GSW_Explosion : Actor
 			Stop;
 	}
 }
+class GSW_BulletPuff : Actor replaces BulletPuff
+{
+	Default
+	{
+		+NOBLOCKMAP
+		+NOGRAVITY
+		+ALLOWPARTICLES
+		+RANDOMIZE
+		RenderStyle "Translucent";
+		Alpha 0.5;
+		VSpeed 1;
+		Mass 5;
+		DamageType "Bullet";
+	}
+	States
+	{
+		Spawn:
+			BPUF AB 4 Bright;
+		Melee:
+			BPUF CDEF 2;
+			Stop;
+	}
+}
+class GSW_ShotgunPuff : GSW_BulletPuff
+{
+	Default
+	{
+		DamageType "Shotgun";
+	}
+}
+class GSW_ChaingunPuff : GSW_BulletPuff
+{
+	Default
+	{
+		DamageType "Chaingun";
+	}
+}

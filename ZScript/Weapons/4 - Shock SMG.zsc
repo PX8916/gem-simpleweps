@@ -34,9 +34,6 @@ class GSW_ShockSMG : GSW_Weapon replaces Chaingun // Make a spawner when you fin
 		Weapon.UpSound "weapons/shocksmg/draw";
 		Inventory.PickupSound "weapons/shocksmg/pickup";
 		AttackSound "weapons/shocksmg/fire";
-		
-		Decal "BulletChip"; // temp
-		DamageType "Bullet";
 	}
 	States
 	{
@@ -125,6 +122,7 @@ class GSW_EnergyPuff : Actor
 		RenderStyle "Add";
 		Alpha 0.5;
 		Translation "0:255=%[0,0,0.75]:[0.75,1,1]";
+		DamageType "Bullet";
 	}
 	States
 	{

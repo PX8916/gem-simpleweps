@@ -33,8 +33,6 @@ class GSW_SawedOffShotgun : GSW_Weapon replaces SuperShotgun
 		//AttackSound "weapons/sawedoff/fire"; // It uses a projectile.
 		Weapon.UpSound "weapons/sawedoff/draw";
 		Inventory.PickupSound "weapons/sawedoff/pickup";
-
-		DamageType "Shotgun";
 	}
 	States
 	{
@@ -127,6 +125,7 @@ class GSW_SawedOffShotgunTracer : GSW_BulletTracer
 		DamageFunction (15);
 		+EXTREMEDEATH
 		Obituary "$KILLSAWEDOFFSHOTGUN"; // just in case
+		DamageType "Shotgun";
 	}
 	States
 	{
@@ -138,7 +137,7 @@ class GSW_SawedOffShotgunTracer : GSW_BulletTracer
 			TNT1 A 1;
 			Loop;
 		Death:
-			TNT1 A 0 A_SpawnItemEx("BulletPuff");
+			TNT1 A 0 A_SpawnItemEx("GSW_ShotgunPuff");
 			Goto XDeath;
 	}
 }

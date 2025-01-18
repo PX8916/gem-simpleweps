@@ -18,7 +18,6 @@ class GSW_Axe : GSW_Weapon replaces Fist
 		Weapon.UpSound "weapons/axe/draw";
 
 		Decal "BulletChip";
-		DamageType "Saw";
 	}
 	States
 	{
@@ -77,6 +76,7 @@ class GSW_AxePuff : Actor
 		Alpha 0.5;
 		VSpeed 1;
 		Mass 5;
+		DamageType "Saw";
 	}
 	States
 	{

@@ -13,14 +13,11 @@ class GSW_DualMACs : GSW_Weapon // Replaces both Perforator and Minigun, so it's
 		Weapon.AmmoUse 1;
 
 		Tag "$TAG_DUALMACS";
+		Obituary "$KILLDUALMACS";
 		Inventory.PickupMessage "$GOTDUALMACS";
 
 		Weapon.UpSound "weapons/dualmacs/draw";
 		Inventory.PickupSound "weapons/dualmacs/pickup";
-
-		Decal "BulletChip"; // I really need to make new decals.
-		Obituary "$KILLDUALMACS";
-		DamageType "Bullet";
 	}
 	States
 	{
@@ -101,7 +98,7 @@ class GSW_DualMACs : GSW_Weapon // Replaces both Perforator and Minigun, so it's
 			MACG A 1 {
 				if (invoker.CheckAmmo(PrimaryFire, false, true))
 				{
-					A_FireBullets(2, 2, -1, 30, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", 0.5, -7.5); // -1 bullets to always fire with spread
+					A_FireBullets(2, 2, -1, 30, "GSW_BulletPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", 0.5, -7.5); // -1 bullets to always fire with spread
 					A_Overlay(-4, "Flash.Left");
 					A_StartSound("weapons/dualmacs/fire", CHAN_WEAPON, CHANF_OVERLAP);
 				}
@@ -120,7 +117,7 @@ class GSW_DualMACs : GSW_Weapon // Replaces both Perforator and Minigun, so it's
 			MACG B 1 {
 				if (invoker.CheckAmmo(PrimaryFire, false, true))
 				{
-					A_FireBullets(2, 2, -1, 30, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", 0.5, 7.5); // -1 bullets to always fire with spread
+					A_FireBullets(2, 2, -1, 30, "GSW_ChaingunPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", 0.5, 7.5); // -1 bullets to always fire with spread
 					A_Overlay(-5, "Flash.Right");
 					A_StartSound("weapons/dualmacs/fire", CHAN_WEAPON, CHANF_OVERLAP);
 				}

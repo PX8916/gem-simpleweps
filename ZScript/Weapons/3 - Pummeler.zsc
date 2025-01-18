@@ -121,19 +121,19 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 	{
 		switch (invoker.curShellType) {
 			case GSW_Pummeler.Shell_Buckshot:
-				A_FireBullets(4, 4, 10, 15, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5);
+				A_FireBullets(4, 4, 10, 15, "GSW_ShotgunPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5);
 				A_StartSound("weapons/pummeler/fire", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Slug:
-				A_FireBullets(0, 0, 1, 150, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5);
+				A_FireBullets(0, 0, 1, 150, "GSW_ShotgunPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_BulletTracer", -2.5, 7.5);
 				A_StartSound("weapons/pummeler/fire-slug", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Poison:
-				A_FireBullets(8, 8, 10, 2, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_PoisonTracer", -2.5, 7.5);
+				A_FireBullets(8, 8, 10, 2, "GSW_ShotgunPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_PoisonTracer", -2.5, 7.5);
 				A_StartSound("weapons/pummeler/fire", CHAN_WEAPON);
 				break;
 			case GSW_Pummeler.Shell_Frag:
-				A_FireBullets(0, 0, 1, 0, flags: FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_FragTracer", -2.5, 7.5);
+				A_FireBullets(0, 0, 1, 0, "GSW_ShotgunPuff", FBF_USEAMMO|FBF_NORANDOM|FBF_NORANDOMPUFFZ, missile: "GSW_FragTracer", -2.5, 7.5);
 				A_StartSound("weapons/pummeler/fire-slug", CHAN_WEAPON);
 				break;
 			default:
@@ -159,9 +159,6 @@ class GSW_Pummeler : GSW_Weapon replaces Shotgun
 
 		Weapon.UpSound "weapons/pummeler/draw";
 		Inventory.PickupSound "weapons/pummeler/pickup";
-		
-		Decal "BulletChip";
-		DamageType "Shotgun";
 	}
 	States
 	{
@@ -322,7 +319,6 @@ class GSW_PoisonCloud : Actor
 			Stop;
 	}
 }
-
 class GSW_FragTracer : GSW_BulletTracer
 {
 	Default
