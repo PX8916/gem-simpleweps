@@ -6,7 +6,7 @@ class GSW_HeavyMinigun : GSW_Weapon replaces BFG9000
 	{
 		if (invoker.CheckAmmo(PrimaryFire, false, true))
 		{
-			A_FireProjectile("GSW_HeavyMinigunBullet", random(-2.5, 2.5), true, 7.5, -2.5, pitch: random(-2.5, 2.5));
+			A_FireProjectile("GSW_HeavyMinigunBullet", random(-2, 2), true, 5, -2.5, pitch: random(-2, 2));
 			A_StartSound("weapons/hminigun/fire", CHAN_WEAPON);
 			A_Overlay(-2, "Flash");
 		}

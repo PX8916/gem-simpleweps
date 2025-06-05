@@ -25,6 +25,7 @@ class GSW_BulletPuff : Actor replaces BulletPuff
 		+NOGRAVITY
 		+ALLOWPARTICLES
 		+RANDOMIZE
+		+NOEXTREMEDEATH
 		RenderStyle "Translucent";
 		Alpha 0.5;
 		VSpeed 1;
@@ -45,6 +46,7 @@ class GSW_ShotgunPuff : GSW_BulletPuff
 	Default
 	{
 		DamageType "Shotgun";
+		-NOEXTREMEDEATH
 	}
 }
 class GSW_ChaingunPuff : GSW_BulletPuff

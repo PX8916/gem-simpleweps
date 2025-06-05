@@ -69,12 +69,15 @@ class GSW_ShoulderStickyLauncher : CustomInventory replaces RocketLauncher
 			}
 			loop;
 		DoSticky:
-			STKI A 2 Offset(-377, 171);
-			STKI A 2 Offset(-374, 131); // B
-			STKI A 2 Offset(-371, 91); // C
-			STKI A 2 Offset(-368, 71); // D
-			STKI A 2 Offset(-365, 51); // E
-			STKI A 4 Offset(-350, 13); // F
+			STKI A 1 Offset(-377, 171);
+			STKI A 1 Offset(-374, 131); // B
+			STKI A 1 Offset(-371, 91); // C
+			STKI A 1 Offset(-368, 71); // D
+			STKI A 1 Offset(-365, 51); // E
+			STKI A 2 Offset(-350, 13); // F
+			Goto ReFireSticky;
+		HoldReFireSticky:
+			STKI A 12 Offset(-350, 13); // F
 		ReFireSticky:
 			STKI A 2 Offset(-350, 13) { // F
 				if (invoker.owner.CountInv("GSW_StickyAmmo") > 0 || (sv_infiniteammo || (invoker.owner.FindInventory ('PowerInfiniteAmmo', true) != null)))
@@ -96,21 +99,21 @@ class GSW_ShoulderStickyLauncher : CustomInventory replaces RocketLauncher
 					return ResolveState("FinishSticky");
 				}
 			}
-			STKI A 12 Offset(-350, 13); // F
 			STKI A 0
 			{
 				if (player.cmd.buttons & BT_USER2 && player.oldbuttons & BT_USER2) // do an ammo check later
 				{
-					return ResolveState("ReFireSticky");
+					return ResolveState("HoldReFireSticky");
 				}
 				return ResolveState(null);
 			}
 		FinishSticky:
-			STKI A 2 Offset(-365, 51); // E
-			STKI A 2 Offset(-368, 71); // D
-			STKI A 2 Offset(-371, 91); // C
-			STKI A 2 Offset(-374, 131); // B
-			STKI A 2 Offset(-377, 171); // A
+			STKI A 1 Offset(-365, 51); // E
+			STKI A 1 Offset(-368, 71); // D
+			STKI A 1 Offset(-371, 91); // C
+			STKI A 1 Offset(-374, 131); // B
+			STKI A 1 Offset(-377, 171); // A
+			TNT1 A 6; // to prevent abuse
 			Goto ReadySticky; //Note that we go back to ready from here
 		FlashSticky:
 			STKF ABCCDD 1;

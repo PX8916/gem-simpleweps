@@ -1,4 +1,4 @@
 #include "./Items/Ammo.zsc"			// Ammo
-#include "./Items/Armor.zsc"		// Armor
+//#include "./Items/Armor.zsc"		// Armor - Unused
 #include "./Items/Health.zsc"		// Health
 #include "./Items/Powerups.zsc"		// Powerups

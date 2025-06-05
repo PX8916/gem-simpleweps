@@ -101,15 +101,15 @@ class GSW_ThingReplacer : StaticEventHandler
 //			case 'TangoVioletArmorLarge':
 //				e.Replacement = "GSW_LargeSuitBattery";
 //				break;
-			case 'TangoArmorBonus':
-				e.Replacement = "GSW_SmallSuitBattery";
-				break;
-			case 'TangoGreenArmor':
-				e.Replacement = "GSW_MediumSuitBattery";
-				break;
-			case 'TangoBlueArmor':
-				e.Replacement = "GSW_LargeSuitBattery";
-				break;
+//			case 'TangoArmorBonus':
+//				e.Replacement = "GSW_SmallSuitBattery";
+//				break;
+//			case 'TangoGreenArmor':
+//				e.Replacement = "GSW_MediumSuitBattery";
+//				break;
+//			case 'TangoBlueArmor':
+//				e.Replacement = "GSW_LargeSuitBattery";
+//				break;
 			case 'TangoStimpack':
 				e.Replacement = "GSW_Stimpack";
 				break;

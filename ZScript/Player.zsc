@@ -15,6 +15,7 @@ class GSW_Player : DoomPlayer
 		Player.WeaponSlot 4, "GSW_ShockSMG", "GSW_DualMACs";
 		Player.WeaponSlot 5, "GSW_HeavyAMR";
 		Player.WeaponSlot 6, "GSW_HeavyMinigun";
+		Player.WeaponSlot 7, "";
 		Player.AttackZOffset 11;
 	}
 }

@@ -3,11 +3,30 @@
 // Just a copy of the Pickaxe from ZandroMod...
 class GSW_Axe : GSW_Weapon replaces Fist
 {
+	action bool IsPressed(int which) // "which" being any BT_* value
+	{
+		return player.cmd.buttons & which;
+	}
+	action state A_AxeReHold()
+	{
+		if (IsPressed(BT_ATTACK)) // if held
+			return ResolveState("LongHold");
+		else
+			return ResolveState(null);
+	}
+	action state A_AxeBerserkReHold()
+	{
+		if (IsPressed(BT_ATTACK)) // if held
+			return ResolveState("LongHold.Berserk");
+		else
+			return ResolveState(null);
+	}
 	Default
 	{
 		+WEAPON.MELEEWEAPON
 		+INVENTORY.UNDROPPABLE
 		+WEAPON.AXEBLOOD
+		+WEAPON.NOALERT
 		Weapon.SlotNumber 1;
 		Inventory.Icon "AXEWZ0";
 
@@ -38,9 +57,17 @@ class GSW_Axe : GSW_Weapon replaces Fist
 			TNT1 A 0 A_JumpIfInventory("GSW_PowerStrength", 1, "Hold.Berserk");
 			AXEW FGH 3;
 			AXEW IJKK 2;
-			AXEW KKKKLMN 1;
+			AXEW K 1;
+		LongHold:
+			TNT1 A 0 A_JumpIfInventory("GSW_PowerStrength", 1, "LongHold.Berserk");
+			AXEW K 1;
+			TNT1 A 0 A_AxeReHold();
+			AXEW LMN 1;
 			TNT1 A 0 A_PlaySound("weapons/axe/swing");
-			AXEW O 2 A_CustomPunch(60, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
+			AXEW O 2 {
+				A_CustomPunch(60, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
+				A_AlertMonsters();
+			}
 			TNT1 A 15;
 			TNT1 A 0 A_ReFire;
 			TNT1 A 3;
@@ -52,9 +79,15 @@ class GSW_Axe : GSW_Weapon replaces Fist
 		Hold.Berserk:
 			AXEW FGH 2;
 			AXEW IJKK 1;
-			AXEW KLMN 1;
+		LongHold.Berserk:
+			AXEW K 1;
+			TNT1 A 0 A_AxeBerserkReHold();
+			AXEW LMN 1;
 			TNT1 A 0 A_PlaySound("weapons/axe/swing");
-			AXEW O 2 A_CustomPunch(600, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
+			AXEW O 2 {
+				A_CustomPunch(600, true, CPF_NORANDOMPUFFZ, "GSW_AxePuff", 96); // big fuck-off axe, so double range
+				A_AlertMonsters();
+			}
 			TNT1 A 13;
 			TNT1 A 0 A_ReFire("Hold.Berserk");
 			TNT1 A 3;
@@ -72,6 +105,7 @@ class GSW_AxePuff : Actor
 		-RANDOMIZE
 		+FORCEPAIN
 		+PUFFONACTORS
+		+EXTREMEDEATH
 		RenderStyle "Translucent";
 		Alpha 0.5;
 		VSpeed 1;

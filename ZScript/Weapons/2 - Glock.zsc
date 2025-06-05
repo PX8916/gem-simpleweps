@@ -98,7 +98,11 @@ class GSW_Glock : GSW_Weapon
 			}
 			// Go to "Empty" reload state if nothing's in the mag
 			GLOC A 0 A_JumpIfNoAmmo("PostFireEmpty");
-			Goto PostFire;
+			// previously this would go to PostFire but this is more of a balance change
+			GLOC BC 2;
+			GLOC CDD 2;
+			GLOC A 8;
+			Goto Ready;
 
 		ReloadEmpty: // Reload, but only 17 bullets.
 		// Not bothering to check for any ammo type.
