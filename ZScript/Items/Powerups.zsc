@@ -1,9 +1,29 @@
-class GSW_Berserk : Berserk replaces Berserk // Cheers, Tango!
+//class GSW_Berserk : Berserk replaces Berserk // Cheers, Tango!
+//{
+//	States
+//	{
+//		Spawn:
+//			PZRK A -1;
+//			Stop;
+//		Pickup:
+//			TNT1 A 0 {
+//				A_GiveInventory("GSW_PowerStrength");
+//				HealThing(100, 0);
+//				A_SetBlend("Red", .25, 35); // from Supercharge
+//			}
+//			Stop;
+//	}
+//}
+class GSW_ChiliPepper : Berserk replaces Berserk // Cheers, Tango!
 {
+	Default
+	{
+		Inventory.PickupMessage "$GOTCHILI";
+	}
 	States
 	{
 		Spawn:
-			PZRK A -1;
+			CHLI A -1;
 			Stop;
 		Pickup:
 			TNT1 A 0 {

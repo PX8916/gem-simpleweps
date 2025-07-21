@@ -90,7 +90,7 @@ class GSW_ThingReplacer : StaticEventHandler
 //				break;
 			// Nailgun seems to be unused and inaccessible
 			case 'TangoBerserk':
-				e.Replacement = "GSW_Berserk";
+				e.Replacement = "GSW_ChiliPepper";
 				break;
 //			case 'TangoVioletArmorSmall':
 //				e.Replacement = "GSW_MediumSuitBattery";

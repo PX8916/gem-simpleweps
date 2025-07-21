@@ -120,6 +120,7 @@ GOTLARGEBATTERY = "\c[White]Picked up a \c[Teal]large suit battery\c[White]. (+1
 
 // Powerups //
 GOTBERSERK = "\c[Red]Berserk\c[White]! (Faster & stronger axe swings!)";
+GOTCHILI = "\c[Red]Flaming hot chili peppers!\c[White]! (Faster & stronger axe swings!)";
 
 
 // ======================== //

@@ -9,14 +9,14 @@ class GSW_Axe : GSW_Weapon replaces Fist
 	}
 	action state A_AxeReHold()
 	{
-		if (IsPressed(BT_ATTACK)) // if held
+		if (IsPressed(BT_ALTATTACK)) // if held
 			return ResolveState("LongHold");
 		else
 			return ResolveState(null);
 	}
 	action state A_AxeBerserkReHold()
 	{
-		if (IsPressed(BT_ATTACK)) // if held
+		if (IsPressed(BT_ALTATTACK)) // if held
 			return ResolveState("LongHold.Berserk");
 		else
 			return ResolveState(null);
@@ -49,10 +49,12 @@ class GSW_Axe : GSW_Weapon replaces Fist
 		Select:
 			AXEW A 1 A_Raise(18);
 			Loop;
+		AltFire:
 		Fire:
 			TNT1 A 0 A_JumpIfInventory("GSW_PowerStrength", 1, "Fire.Berserk");
 			AXEW BBBCCDE 1;
 			TNT1 A 8;
+		AltHold:
 		Hold:
 			TNT1 A 0 A_JumpIfInventory("GSW_PowerStrength", 1, "Hold.Berserk");
 			AXEW FGH 3;
